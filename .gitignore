@@ -1,0 +1,6 @@
+# Real addresses live in the COMMUTE_ROUTES_JSON secret, not in the repo.
+scripts/routes.json
+
+__pycache__/
+*.pyc
+.venv/

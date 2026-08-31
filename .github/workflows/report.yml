@@ -1,0 +1,38 @@
+name: Rebuild commute report
+
+# Saturday 09:00 PT (16:00 UTC in summer). Timing is not critical here, so a
+# single UTC hour is fine.
+on:
+  schedule:
+    - cron: "0 16 * * 6"
+  workflow_dispatch:
+
+concurrency:
+  group: commute-log
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Build the report
+        run: python3 scripts/analyze.py
+
+      - name: Commit the report
+        run: |
+          set -euo pipefail
+          if [ -z "$(git status --porcelain report.md report.html)" ]; then
+            echo "Report unchanged."
+            exit 0
+          fi
+          git config user.name  "commute-bot"
+          git config user.email "commute-bot@users.noreply.github.com"
+          git add report.md report.html
+          git commit -m "report: refresh $(date -u +'%Y-%m-%d')"
+          git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+          git push

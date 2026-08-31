@@ -1,0 +1,77 @@
+name: Sample commute times
+
+# All cron expressions below are UTC. Pacific time is UTC-7 in summer (PDT) and
+# UTC-8 in winter (PST), so each schedule spans the union of both offsets and
+# the script itself decides whether the current *local* time is inside a window.
+# That keeps the job correct across both DST transitions with no edits.
+#
+#   07:00-11:00 PT  ->  14:00-19:00 UTC        (Mon-Fri UTC == Mon-Fri PT)
+#   14:00-17:30 PT  ->  21:00-01:30 UTC        (rolls into the next UTC day,
+#                                               hence the Tue-Sat entry)
+on:
+  schedule:
+    - cron: "*/15 14-19 * * 1-5"   # morning window, both DST offsets
+    - cron: "*/15 21-23 * * 1-5"   # afternoon window, same UTC day
+    - cron: "*/15 0-1  * * 2-6"    # afternoon window, spilling past UTC midnight
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Sample even if outside the normal window"
+        type: boolean
+        default: true
+      mock:
+        description: "Use fabricated durations (no API call, no key needed)"
+        type: boolean
+        default: false
+
+# Serialize runs so two samples never race to commit the same CSV.
+concurrency:
+  group: commute-log
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  sample:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Take a sample
+        env:
+          GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
+          COMMUTE_ROUTES_JSON: ${{ secrets.COMMUTE_ROUTES_JSON }}
+        run: |
+          python3 scripts/sample_commute.py \
+            ${{ inputs.force && '--force' || '' }} \
+            ${{ inputs.mock && '--mock' || '' }}
+
+      - name: Commit the log
+        run: |
+          set -euo pipefail
+          if [ -z "$(git status --porcelain data)" ]; then
+            echo "Nothing new to commit."
+            exit 0
+          fi
+
+          git config user.name  "commute-bot"
+          git config user.email "commute-bot@users.noreply.github.com"
+          git add data
+          git commit -m "log: $(date -u +'%Y-%m-%dT%H:%MZ') sample"
+
+          # A delayed run can collide with the next one; rebase and retry.
+          for attempt in 1 2 3 4 5; do
+            if git push; then
+              echo "Pushed on attempt $attempt."
+              exit 0
+            fi
+            echo "Push rejected, rebasing (attempt $attempt)..."
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+            sleep $((attempt * 3))
+          done
+
+          echo "Could not push the log after 5 attempts." >&2
+          exit 1

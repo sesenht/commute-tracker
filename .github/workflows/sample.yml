@@ -18,15 +18,17 @@ on:
       force:
         description: "Sample even if outside the normal window"
         type: boolean
-        default: true
+        default: false
       mock:
         description: "Use fabricated durations (no API call, no key needed)"
         type: boolean
         default: false
 
-# Serialize runs so two samples never race to commit the same CSV.
+# Serialize samples so two never race to commit the same CSV. The report job
+# uses its own group: sharing one group means a queued sample is discarded
+# whenever another run is already pending, which silently drops slots.
 concurrency:
-  group: commute-log
+  group: commute-sample
   cancel-in-progress: false
 
 permissions:

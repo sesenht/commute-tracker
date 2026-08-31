@@ -1,1 +1,13 @@
 sampled_at_utc,local_date,local_time,weekday,slot,period,direction,home,duration_s,duration_min,static_duration_s,distance_m,delay_ratio,status,note
+2026-08-31T22:02:04Z,2026-08-31,15:02,Monday,15:00,afternoon,office_to_home,home1,4573,76.2,3051,69148,1.499,ok,
+2026-08-31T22:02:04Z,2026-08-31,15:02,Monday,15:00,afternoon,office_to_home,home2,3142,52.4,2965,71866,1.060,ok,
+2026-08-31T23:40:52Z,2026-08-31,16:40,Monday,16:45,afternoon,office_to_home,home1,4966,82.8,3051,69148,1.628,ok,
+2026-08-31T23:40:52Z,2026-08-31,16:40,Monday,16:45,afternoon,office_to_home,home2,3387,56.5,3063,72813,1.106,ok,
+2026-08-31T23:42:25Z,2026-08-31,16:42,Monday,16:45,afternoon,office_to_home,home1,5035,83.9,3051,69148,1.650,ok,
+2026-08-31T23:42:25Z,2026-08-31,16:42,Monday,16:45,afternoon,office_to_home,home2,3410,56.8,3063,72813,1.113,ok,
+2026-08-31T23:45:32Z,2026-08-31,16:45,Monday,16:45,afternoon,office_to_home,home1,4996,83.3,3137,72147,1.593,ok,
+2026-08-31T23:45:32Z,2026-08-31,16:45,Monday,16:45,afternoon,office_to_home,home2,3407,56.8,3436,72813,0.992,ok,
+2026-08-31T23:46:53Z,2026-08-31,16:46,Monday,16:45,afternoon,office_to_home,home1,5107,85.1,3051,69148,1.674,ok,
+2026-08-31T23:46:53Z,2026-08-31,16:46,Monday,16:45,afternoon,office_to_home,home2,3431,57.2,3063,72813,1.120,ok,
+2026-08-31T23:49:07Z,2026-08-31,16:49,Monday,16:45,afternoon,office_to_home,home1,5034,83.9,3137,72147,1.605,ok,
+2026-08-31T23:49:07Z,2026-08-31,16:49,Monday,16:45,afternoon,office_to_home,home2,3365,56.1,3063,72813,1.099,ok,

@@ -1,0 +1,502 @@
+<title>Commute time report</title>
+<style>
+:root { --bg:#fbfaf8; --fg:#1d1c1a; --muted:#6b6862; --line:#e2ded7; --card:#fff; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg:#171614; --fg:#eceae6; --muted:#9c978e; --line:#302e2a; --card:#201f1c; }
+}
+* { box-sizing:border-box; }
+body { margin:0; padding:32px 20px 64px; background:var(--bg); color:var(--fg);
+  font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; }
+.wrap { max-width:1040px; margin:0 auto; }
+h1 { font-size:26px; margin:0 0 6px; letter-spacing:-.01em; }
+h2 { font-size:19px; margin:40px 0 4px; letter-spacing:-.01em; }
+h3 { font-size:14px; margin:22px 0 8px; color:var(--muted);
+  text-transform:uppercase; letter-spacing:.07em; }
+p.sub { color:var(--muted); margin:0 0 8px; }
+.scroll { overflow-x:auto; }
+table { border-collapse:collapse; width:100%; font-variant-numeric:tabular-nums; }
+th, td { padding:7px 10px; text-align:center; border-bottom:1px solid var(--line);
+  white-space:nowrap; }
+th { font-weight:600; font-size:13px; color:var(--muted); text-align:center; }
+td.time, th.time { text-align:left; color:var(--muted); font-size:13px; }
+td.cell { color:#12100e; font-weight:600; border-radius:3px; }
+td.empty { color:var(--muted); font-weight:400; }
+.legend { display:flex; align-items:center; gap:8px; color:var(--muted);
+  font-size:13px; margin:10px 0 0; }
+.swatch { width:120px; height:10px; border-radius:5px;
+  background:linear-gradient(90deg,#3f9a6b,#e0c04a,#c8523f); }
+.card { background:var(--card); border:1px solid var(--line); border-radius:10px;
+  padding:14px 16px; margin-top:14px; }
+</style>
+<div class="wrap">
+<h1>Commute time report</h1>
+<p class="sub">2 samples over 1 days, 2026-08-31 to 2026-08-31. Median driving minutes, live traffic.</p>
+<div class="legend"><span>faster</span><span class="swatch"></span><span>slower</span></div>
+<h2>Morning - home to office</h2>
+<h3>home1</h3>
+<div class="scroll"><table><thead><tr><th class="time">Time</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th></tr></thead><tbody>
+<tr><td class="time">07:00</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">07:15</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">07:30</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">07:45</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">08:00</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">08:15</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">08:30</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">08:45</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">09:00</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">09:15</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">09:30</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">09:45</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">10:00</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">10:15</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">10:30</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">10:45</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">11:00</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+</tbody></table></div>
+<h3>home2</h3>
+<div class="scroll"><table><thead><tr><th class="time">Time</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th></tr></thead><tbody>
+<tr><td class="time">07:00</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">07:15</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">07:30</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">07:45</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">08:00</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">08:15</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">08:30</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">08:45</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">09:00</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">09:15</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">09:30</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">09:45</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">10:00</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">10:15</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">10:30</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">10:45</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">11:00</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+</tbody></table></div>
+<h2>Afternoon - office to home</h2>
+<h3>home1</h3>
+<div class="scroll"><table><thead><tr><th class="time">Time</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th></tr></thead><tbody>
+<tr><td class="time">14:00</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">14:15</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">14:30</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">14:45</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">15:00</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">15:15</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">15:30</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">15:45</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">16:00</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">16:15</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">16:30</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">16:45</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">17:00</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">17:15</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">17:30</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+</tbody></table></div>
+<h3>home2</h3>
+<div class="scroll"><table><thead><tr><th class="time">Time</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th></tr></thead><tbody>
+<tr><td class="time">14:00</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">14:15</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">14:30</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">14:45</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">15:00</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">15:15</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">15:30</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">15:45</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">16:00</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">16:15</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">16:30</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">16:45</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">17:00</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">17:15</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+<tr><td class="time">17:30</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+<td class="empty">&ndash;</td>
+</tr>
+</tbody></table></div>
+<h2>Best departure windows</h2>
+<div class="card"><h3>Morning - home to office</h3><table><thead><tr><th class="time">Home</th><th>Day</th><th>Depart</th><th>Median</th><th>n</th></tr></thead><tbody>
+</tbody></table></div>
+<div class="card"><h3>Afternoon - office to home</h3><table><thead><tr><th class="time">Home</th><th>Day</th><th>Depart</th><th>Median</th><th>n</th></tr></thead><tbody>
+</tbody></table></div>
+</div>

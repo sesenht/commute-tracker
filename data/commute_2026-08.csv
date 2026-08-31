@@ -1,3 +1,5 @@
 sampled_at_utc,local_date,local_time,weekday,slot,period,direction,home,duration_s,duration_min,static_duration_s,distance_m,delay_ratio,status,note
 2026-08-31T22:02:04Z,2026-08-31,15:02,Monday,15:00,afternoon,office_to_home,home1,4573,76.2,3051,69148,1.499,ok,
 2026-08-31T22:02:04Z,2026-08-31,15:02,Monday,15:00,afternoon,office_to_home,home2,3142,52.4,2965,71866,1.060,ok,
+2026-08-31T23:40:52Z,2026-08-31,16:40,Monday,16:45,afternoon,office_to_home,home1,4966,82.8,3051,69148,1.628,ok,
+2026-08-31T23:40:52Z,2026-08-31,16:40,Monday,16:45,afternoon,office_to_home,home2,3387,56.5,3063,72813,1.106,ok,

@@ -1,18 +1,11 @@
 name: Sample commute times
 
-# All cron expressions below are UTC. Pacific time is UTC-7 in summer (PDT) and
-# UTC-8 in winter (PST), so each schedule spans the union of both offsets and
-# the script itself decides whether the current *local* time is inside a window.
-# That keeps the job correct across both DST transitions with no edits.
-#
-#   07:00-11:00 PT  ->  14:00-19:00 UTC        (Mon-Fri UTC == Mon-Fri PT)
-#   14:00-17:30 PT  ->  20:00-01:30 UTC        (rolls into the next UTC day,
-#                                               hence the Tue-Sat entry)
+# Scheduling lives in the Cloudflare Worker (see worker/ and the README), not
+# here. GitHub's cron is best-effort and silently skips slots under load, which
+# puts holes in the time-of-day curve at exactly the busy hours that matter.
+# The Worker fires workflow_dispatch on time instead; this workflow only ever
+# runs on demand.
 on:
-  schedule:
-    - cron: "*/15 14-19 * * 1-5"   # morning window, both DST offsets
-    - cron: "*/15 20-23 * * 1-5"   # afternoon window, both DST offsets
-    - cron: "*/15 0-1  * * 2-6"    # afternoon window, spilling past UTC midnight
   workflow_dispatch:
     inputs:
       force:
@@ -61,17 +54,30 @@ jobs:
 
           git config user.name  "commute-bot"
           git config user.email "commute-bot@users.noreply.github.com"
-          git add data
-          git commit -m "log: $(date -u +'%Y-%m-%dT%H:%MZ') sample"
 
-          # A delayed run can collide with the next one; rebase and retry.
+          # Two runs appending to the same CSV is a *content* conflict at the
+          # end of the file, which plain `git pull --rebase` stops on. The rows
+          # are append-only (sample_commute.py never rewrites a line), so a
+          # union merge is exactly right: keep both sides' new rows.
+          git config merge.union.driver 'git merge-file --union -- %A %O %B'
+          echo "data/*.csv merge=union" >> .git/info/attributes
+
+          git add data
+          git commit --quiet -m "log: $(date -u +'%Y-%m-%dT%H:%MZ') sample"
+
           for attempt in 1 2 3 4 5; do
-            if git push; then
+            if git push --quiet; then
               echo "Pushed on attempt $attempt."
               exit 0
             fi
-            echo "Push rejected, rebasing (attempt $attempt)..."
-            git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+            echo "Push rejected, merging and retrying (attempt $attempt)..."
+            # A merge (not a rebase) lets the union driver resolve the CSV.
+            git fetch --quiet origin "${GITHUB_REF_NAME}"
+            if ! git merge --no-edit --quiet "origin/${GITHUB_REF_NAME}"; then
+              echo "Could not merge the log automatically." >&2
+              git merge --abort || true
+              exit 1
+            fi
             sleep $((attempt * 3))
           done
 

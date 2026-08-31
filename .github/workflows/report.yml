@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: commute-log
+  group: commute-report
   cancel-in-progress: false
 
 permissions:

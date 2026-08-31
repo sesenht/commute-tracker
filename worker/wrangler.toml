@@ -1,0 +1,17 @@
+name = "commute-tracker-cron"
+main = "worker.js"
+compatibility_date = "2025-01-01"
+
+# All times UTC. Pacific is UTC-7 in summer (PDT) and UTC-8 in winter (PST), so
+# these hours are the union of both offsets and sample_commute.py decides
+# whether the current *local* time is actually inside a window. Same approach as
+# .github/workflows/sample.yml, kept deliberately in sync with it.
+#
+#   07:00-11:00 PT  ->  14:00-19:00 UTC
+#   14:00-17:30 PT  ->  20:00-01:30 UTC  (rolls past UTC midnight)
+[triggers]
+crons = [
+  "0,15,30,45 14-19 * * 1-5",   # morning window, both DST offsets
+  "0,15,30,45 20-23 * * 1-5",   # afternoon window, both DST offsets
+  "0,15,30,45 0-1  * * 2-6",    # afternoon window, spilling past UTC midnight
+]

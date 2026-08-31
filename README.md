@@ -1,7 +1,8 @@
 # Commute tracker
 
 Samples live-traffic driving times between two homes and the an office
-every 15 minutes, on a schedule, from GitHub Actions — then builds a
+every 15 minutes, on a schedule, from GitHub Actions (triggered by a
+Cloudflare Worker) — then builds a
 weekday × time-of-day heatmap so you can see which days and hours are actually
 cheapest to drive.
 
@@ -10,6 +11,7 @@ cheapest to drive.
 | **Morning** | 07:00–11:00 PT, Mon–Fri, each home → office |
 | **Afternoon** | 14:00–17:30 PT, Mon–Fri, office → each home |
 | **Cadence** | every 15 minutes → 32 samples/day, 64 API calls/day |
+| **Trigger** | Cloudflare Worker cron → `workflow_dispatch` |
 | **Log** | `data/commute_YYYY-MM.csv`, committed by the workflow |
 | **Report** | `report.md` + `report.html`, rebuilt weekly |
 
@@ -75,24 +77,94 @@ permissions**. Without this the sample runs but the push is rejected.
 
 Actions → *Sample commute times* → **Run workflow** with `mock: true`. That
 writes a fake row without touching the API and proves the commit path works.
-Then run it again with `mock: false` to confirm the key works, and delete the
-test rows from `data/` before the real collection starts.
+Then run it again with `mock: false` to confirm the key works.
 
-The schedule takes over on its own from there.
+Delete the test rows from `data/` afterwards. Repeated manual runs land several
+readings in one 15-minute slot, and the report takes a median per slot, so test
+rows would skew that bucket.
 
-## How the schedule handles Pacific time
+**6. Deploy the scheduler**
 
-GitHub cron is UTC-only and has no DST awareness, so the workflow schedules a
-*superset* of the needed hours in UTC and `sample_commute.py` decides whether
-the current **local** time is inside a window — exiting without an API call if
-not. That covers PDT (UTC−7) and PST (UTC−8) with no seasonal edits, and it is
-verified to produce all 32 daily slots in both offsets and across both DST
-switch weekends.
+Nothing is scheduled until you deploy the Worker in [`worker/`](worker/) — the
+workflow itself only runs on demand.
 
-Cron is also best-effort; runs fire late under load. Each sample records its
-true timestamp in `local_time` and snaps to the nearest 15-minute `slot`, with a
-±10-minute grace at the window edges so a delayed 07:00 run still lands on the
-07:00 slot instead of being dropped.
+```bash
+npm install -g wrangler
+wrangler login            # opens a browser
+```
+
+Create a GitHub token for the Worker at
+<https://github.com/settings/personal-access-tokens/new> — a *fine-grained*
+token, not a classic one:
+
+| Field | Value |
+|---|---|
+| Repository access | **Only select repositories** → this repo |
+| Permissions | Repository permissions → **Actions: Read and write** |
+| Expiration | set one, and a calendar reminder to rotate |
+
+Actions: write is the only permission it needs; the token can trigger this one
+workflow and nothing else.
+
+If you forked or renamed, update the constants at the top of
+[`worker/worker.js`](worker/worker.js):
+
+```js
+const OWNER = "sesenht";
+const REPO  = "commute-tracker";
+```
+
+Then deploy and add the token:
+
+```bash
+cd worker
+wrangler deploy
+wrangler secret put GITHUB_TOKEN    # paste at the prompt
+```
+
+Deploy first — `secret put` needs the Worker to exist. Cloudflare stores the
+secret encrypted; never put it in `wrangler.toml`.
+
+**7. Confirm it fires**
+
+`wrangler deploy` prints the Worker's URL. Opening it triggers one sample
+immediately, which tests the token and the dispatch path in one shot:
+
+```bash
+curl https://commute-tracker-cron.<your-subdomain>.workers.dev
+```
+
+`dispatched` means it worked — a new run should appear under Actions. Then watch
+a real scheduled fire:
+
+```bash
+wrangler tail             # leave running across a :00/:15/:30/:45 boundary
+```
+
+Collection is automatic from here.
+
+## How the schedule works
+
+A Cloudflare Worker owns the clock. Every 15 minutes inside the sampling
+windows it calls GitHub's API to trigger the `Sample commute times` workflow,
+which does the actual work and commits the result.
+
+GitHub's own cron is deliberately not used. It is best-effort: it fires late
+under load and **skips slots entirely**, with no retry and no trace in the run
+list. That is fine when you want a daily average and not fine when you want a
+time-of-day curve — GitHub sheds load during US business hours, so the slots
+most likely to vanish are the peak-hour ones that matter most. Cloudflare's Cron
+Triggers fire on schedule (within seconds), which keeps the curve evenly
+sampled.
+
+Cron is UTC-only and has no DST awareness, so the Worker schedules a *superset*
+of the needed hours and `sample_commute.py` decides whether the current **local**
+time is inside a window, exiting without an API call if not. That covers PDT
+(UTC−7) and PST (UTC−8) with no seasonal edits.
+
+Each sample records its true timestamp in `local_time` and snaps to the nearest
+15-minute `slot`, with a ±10-minute grace at the window edges, so a slightly
+late run still lands on the right slot.
 
 ## Data
 
@@ -136,10 +208,30 @@ holiday week.
 
 | To change | Edit |
 |---|---|
-| Window hours | `MORNING` / `AFTERNOON` in `scripts/config.py`, then widen the UTC hours in `.github/workflows/sample.yml` to match |
-| Sample interval | `SAMPLE_INTERVAL_MIN` in `config.py` **and** the `*/15` in the cron |
+| Window hours | `MORNING` / `AFTERNOON` in `scripts/config.py`, then widen the UTC hours in `worker/wrangler.toml` to match |
+| Sample interval | `SAMPLE_INTERVAL_MIN` in `config.py` **and** the crons in `worker/wrangler.toml` |
 | Add a third home | add a key under `homes` in the `COMMUTE_ROUTES_JSON` secret; nothing else changes |
 | Traffic model | `ROUTING_PREFERENCE` in `sample_commute.py` (`TRAFFIC_AWARE` is cheaper and slightly less accurate) |
+
+## Troubleshooting
+
+**No runs appear, but the Worker returns `dispatched`** — check `REF` in
+`worker.js` matches your default branch. A dispatch to a branch that lacks the
+workflow file succeeds silently.
+
+**The Worker returns 401 or 403** — the token is missing, expired, or lacks
+Actions: write. A 404 usually means `OWNER`/`REPO` are wrong: GitHub returns 404
+rather than 403 for a repo the token cannot see.
+
+**Runs succeed but write no rows** — expected outside a sampling window. The
+Worker sends `force: false`, so the script's own window check still applies.
+That is what stops off-window triggers from writing junk rows.
+
+**A run fails on push** — two samples that overlap both append to the same CSV.
+The workflow configures a union merge driver for `data/*.csv` and merges (rather
+than rebases) before retrying, so concurrent appends resolve on their own.
+Rows can land out of timestamp order; the report buckets by the `slot` column,
+so this does not affect the results.
 
 ## Local use
 

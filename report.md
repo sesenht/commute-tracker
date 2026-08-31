@@ -1,7 +1,7 @@
 # Commute time report
 
 - Samples: **2** across **1** days (2026-08-31 to 2026-08-31)
-- Generated 2026-08-31 22:04 local
+- Generated 2026-08-31 16:53 local
 - Cells show the **median** drive time in minutes; `-` means fewer than 2 samples.
 
 ## Morning - home to office

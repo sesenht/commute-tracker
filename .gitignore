@@ -4,3 +4,4 @@ scripts/routes.json
 __pycache__/
 *.pyc
 .venv/
+worker/.wrangler/cache/wrangler-account.json

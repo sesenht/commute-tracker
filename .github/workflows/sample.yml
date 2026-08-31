@@ -6,12 +6,12 @@ name: Sample commute times
 # That keeps the job correct across both DST transitions with no edits.
 #
 #   07:00-11:00 PT  ->  14:00-19:00 UTC        (Mon-Fri UTC == Mon-Fri PT)
-#   14:00-17:30 PT  ->  21:00-01:30 UTC        (rolls into the next UTC day,
+#   14:00-17:30 PT  ->  20:00-01:30 UTC        (rolls into the next UTC day,
 #                                               hence the Tue-Sat entry)
 on:
   schedule:
     - cron: "*/15 14-19 * * 1-5"   # morning window, both DST offsets
-    - cron: "*/15 21-23 * * 1-5"   # afternoon window, same UTC day
+    - cron: "*/15 20-23 * * 1-5"   # afternoon window, both DST offsets
     - cron: "*/15 0-1  * * 2-6"    # afternoon window, spilling past UTC midnight
   workflow_dispatch:
     inputs:

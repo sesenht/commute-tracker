@@ -1,7 +1,7 @@
 # Commute time report
 
-- Samples: **2** across **1** days (2026-08-31 to 2026-08-31)
-- Generated 2026-08-31 16:53 local
+- Samples: **118** across **4** days (2026-08-31 to 2026-09-03)
+- Generated 2026-09-03 15:30 local
 - Cells show the **median** drive time in minutes; `-` means fewer than 2 samples.
 
 ## Morning - home to office
@@ -68,7 +68,7 @@
 | 16:15 | - | - | - | - | - |
 | 16:30 | - | - | - | - | - |
 | 16:45 | - | - | - | - | - |
-| 17:00 | - | - | - | - | - |
+| 17:00 | 83 | - | - | - | - |
 | 17:15 | - | - | - | - | - |
 | 17:30 | - | - | - | - | - |
 
@@ -88,7 +88,7 @@
 | 16:15 | - | - | - | - | - |
 | 16:30 | - | - | - | - | - |
 | 16:45 | - | - | - | - | - |
-| 17:00 | - | - | - | - | - |
+| 17:00 | 54 | - | - | - | - |
 | 17:15 | - | - | - | - | - |
 | 17:30 | - | - | - | - | - |
 
@@ -103,10 +103,14 @@
 
 | Rank | Home | Day | Depart | Median min | Samples |
 |---|---|---|---|---|---|
+| 1 | home2 | Monday | 17:00 | 54 | 2 |
+| 2 | home1 | Monday | 17:00 | 83 | 2 |
 
 ## Home vs home
 
 | Direction | Home | Overall median | Best day | Worst day |
 |---|---|---|---|---|
-| Afternoon - office to home | home1 | 76 min | Monday (76 min) | Monday (76 min) |
-| Afternoon - office to home | home2 | 52 min | Monday (52 min) | Monday (52 min) |
+| Morning - home to office | home1 | 89 min | Wednesday (87 min) | Thursday (90 min) |
+| Morning - home to office | home2 | 51 min | Wednesday (50 min) | Thursday (57 min) |
+| Afternoon - office to home | home1 | 87 min | Monday (81 min) | Wednesday (90 min) |
+| Afternoon - office to home | home2 | 56 min | Monday (53 min) | Tuesday (62 min) |

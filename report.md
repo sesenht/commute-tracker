@@ -1,7 +1,7 @@
 # Commute time report
 
 - Samples: **168** across **4** days (2026-08-31 to 2026-09-03)
-- Generated 2026-09-03 17:53 local
+- Generated 2026-09-04 00:53 local
 - Cells show the **median** drive time in minutes; `-` means no sample yet.
 - Cells marked ° rest on a single sample -- one reading, not a median. Treat them as provisional until that weekday recurs.
 

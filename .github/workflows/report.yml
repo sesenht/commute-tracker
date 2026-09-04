@@ -20,19 +20,58 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
-      - name: Build the report
-        run: python3 scripts/analyze.py
-
-      - name: Commit the report
+      - name: Build and commit the report
         run: |
           set -euo pipefail
-          if [ -z "$(git status --porcelain report.md report.html)" ]; then
-            echo "Report unchanged."
-            exit 0
-          fi
+
           git config user.name  "commute-bot"
           git config user.email "commute-bot@users.noreply.github.com"
-          git add report.md report.html
-          git commit -m "report: refresh $(date -u +'%Y-%m-%d')"
-          git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
-          git push
+
+          # The report must describe the data committed alongside it.
+          #
+          # A sample run commits new CSV rows every 15 minutes and can land at
+          # any point during this job, so the ordering matters:
+          #
+          #   1. pull first, so the report is built from current data;
+          #   2. build, then decide whether anything actually changed;
+          #   3. push -- and if that is rejected, a sample landed mid-build, so
+          #      discard the attempt and rebuild against the newer rows.
+          #
+          # Building before the pull -- or exiting early on "unchanged" without
+          # first confirming we are level with the remote -- publishes a report
+          # that silently disagrees with the CSVs in its own commit.
+          for attempt in 1 2 3 4 5; do
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+
+            python3 scripts/analyze.py
+
+            if [ -z "$(git status --porcelain report.md report.html)" ]; then
+              # The report matches the data we built from -- but only trust
+              # that if no sample has landed since the pull above. Otherwise
+              # loop round and rebuild against the newer rows.
+              git fetch --quiet origin "${GITHUB_REF_NAME}"
+              if [ "$(git rev-parse HEAD)" = "$(git rev-parse "origin/${GITHUB_REF_NAME}")" ]; then
+                echo "Report already matches the committed data."
+                exit 0
+              fi
+              echo "New samples landed while building; rebuilding (attempt $attempt)..."
+              continue
+            fi
+
+            git add report.md report.html
+            git commit -m "report: refresh $(date -u +'%Y-%m-%d')"
+
+            if git push; then
+              echo "Pushed on attempt $attempt."
+              exit 0
+            fi
+
+            # A sample landed while we were building. Drop this commit and
+            # rebuild against the newer data rather than pushing a stale report.
+            echo "Push rejected, rebuilding against newer data (attempt $attempt)..."
+            git reset --hard HEAD~1
+            sleep $((attempt * 3))
+          done
+
+          echo "Could not push the report after 5 attempts." >&2
+          exit 1

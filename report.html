@@ -20,6 +20,8 @@ th, td { padding:7px 10px; text-align:center; border-bottom:1px solid var(--line
 th { font-weight:600; font-size:13px; color:var(--muted); text-align:center; }
 td.time, th.time { text-align:left; color:var(--muted); font-size:13px; }
 td.cell { color:#12100e; font-weight:600; border-radius:3px; }
+/* One reading, not a median: dimmed and dashed so it reads as provisional. */
+td.cell.single { opacity:.62; outline:1px dashed rgba(0,0,0,.38); outline-offset:-2px; }
 td.empty { color:var(--muted); font-weight:400; }
 .legend { display:flex; align-items:center; gap:8px; color:var(--muted);
   font-size:13px; margin:10px 0 0; }
@@ -30,6 +32,7 @@ td.empty { color:var(--muted); font-weight:400; }
 </style>
 <div class="wrap">
 <h1>Commute time report</h1>
+<p class="sub">Faded, dashed cells rest on a single sample &mdash; one reading, not a median. Provisional until that weekday recurs.</p>
 <p class="sub">168 samples over 4 days, 2026-08-31 to 2026-09-03. Median driving minutes, live traffic.</p>
 <div class="legend"><span>faster</span><span class="swatch"></span><span>slower</span></div>
 <h2>Morning - home to office</h2>
@@ -38,120 +41,120 @@ td.empty { color:var(--muted); font-weight:400; }
 <tr><td class="time">07:00</td>
 <td class="empty">&ndash;</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(207,114,66,0.85)" title="Wednesday 07:00 &middot; n=1 &middot; single sample">87</td>
+<td class="cell single" style="background:rgba(209,122,67,0.85)" title="Thursday 07:00 &middot; n=1 &middot; single sample">85</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">07:15</td>
 <td class="empty">&ndash;</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(203,97,65,0.85)" title="Wednesday 07:15 &middot; n=1 &middot; single sample">90</td>
+<td class="cell single" style="background:rgba(205,103,65,0.85)" title="Thursday 07:15 &middot; n=1 &middot; single sample">89</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">07:30</td>
 <td class="empty">&ndash;</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(201,87,63,0.85)" title="Wednesday 07:30 &middot; n=1 &middot; single sample">93</td>
+<td class="cell single" style="background:rgba(202,93,64,0.85)" title="Thursday 07:30 &middot; n=1 &middot; single sample">91</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">07:45</td>
 <td class="empty">&ndash;</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(202,89,64,0.85)" title="Wednesday 07:45 &middot; n=1 &middot; single sample">92</td>
+<td class="cell single" style="background:rgba(204,101,65,0.85)" title="Thursday 07:45 &middot; n=1 &middot; single sample">90</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">08:00</td>
 <td class="empty">&ndash;</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(203,95,64,0.85)" title="Wednesday 08:00 &middot; n=1 &middot; single sample">91</td>
+<td class="cell single" style="background:rgba(204,100,65,0.85)" title="Thursday 08:00 &middot; n=1 &middot; single sample">90</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">08:15</td>
 <td class="empty">&ndash;</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(202,93,64,0.85)" title="Wednesday 08:15 &middot; n=1 &middot; single sample">91</td>
+<td class="cell single" style="background:rgba(205,105,65,0.85)" title="Thursday 08:15 &middot; n=1 &middot; single sample">89</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">08:30</td>
 <td class="empty">&ndash;</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(202,93,64,0.85)" title="Wednesday 08:30 &middot; n=1 &middot; single sample">91</td>
+<td class="cell single" style="background:rgba(204,100,65,0.85)" title="Thursday 08:30 &middot; n=1 &middot; single sample">90</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">08:45</td>
 <td class="empty">&ndash;</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(200,82,63,0.85)" title="Wednesday 08:45 &middot; n=1 &middot; single sample">94</td>
+<td class="cell single" style="background:rgba(205,105,65,0.85)" title="Thursday 08:45 &middot; n=1 &middot; single sample">89</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">09:00</td>
 <td class="empty">&ndash;</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(205,105,65,0.85)" title="Wednesday 09:00 &middot; n=1 &middot; single sample">89</td>
+<td class="cell single" style="background:rgba(207,115,66,0.85)" title="Thursday 09:00 &middot; n=1 &middot; single sample">86</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">09:15</td>
 <td class="empty">&ndash;</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(208,117,66,0.85)" title="Wednesday 09:15 &middot; n=1 &middot; single sample">86</td>
+<td class="cell single" style="background:rgba(211,133,68,0.85)" title="Thursday 09:15 &middot; n=1 &middot; single sample">82</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">09:30</td>
 <td class="empty">&ndash;</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(213,139,69,0.85)" title="Wednesday 09:30 &middot; n=1 &middot; single sample">81</td>
+<td class="cell single" style="background:rgba(216,157,71,0.85)" title="Thursday 09:30 &middot; n=1 &middot; single sample">77</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">09:45</td>
 <td class="empty">&ndash;</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(215,151,70,0.85)" title="Wednesday 09:45 &middot; n=1 &middot; single sample">79</td>
+<td class="cell single" style="background:rgba(219,167,72,0.85)" title="Thursday 09:45 &middot; n=1 &middot; single sample">75</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">10:00</td>
 <td class="empty">&ndash;</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(220,173,72,0.85)" title="Wednesday 10:00 &middot; n=1 &middot; single sample">74</td>
+<td class="cell single" style="background:rgba(221,179,73,0.85)" title="Thursday 10:00 &middot; n=1 &middot; single sample">72</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">10:15</td>
 <td class="empty">&ndash;</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(220,191,75,0.85)" title="Wednesday 10:15 &middot; n=1 &middot; single sample">69</td>
+<td class="cell single" style="background:rgba(224,192,74,0.85)" title="Thursday 10:15 &middot; n=1 &middot; single sample">70</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">10:30</td>
 <td class="empty">&ndash;</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(206,188,78,0.85)" title="Wednesday 10:30 &middot; n=1 &middot; single sample">67</td>
+<td class="cell single" style="background:rgba(206,188,78,0.85)" title="Thursday 10:30 &middot; n=1 &middot; single sample">67</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">10:45</td>
 <td class="empty">&ndash;</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(196,185,80,0.85)" title="Wednesday 10:45 &middot; n=1 &middot; single sample">66</td>
+<td class="cell single" style="background:rgba(196,185,80,0.85)" title="Thursday 10:45 &middot; n=1 &middot; single sample">66</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">11:00</td>
 <td class="empty">&ndash;</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(190,184,81,0.85)" title="Wednesday 11:00 &middot; n=1 &middot; single sample">65</td>
+<td class="cell single" style="background:rgba(192,184,81,0.85)" title="Thursday 11:00 &middot; n=1 &middot; single sample">65</td>
 <td class="empty">&ndash;</td>
 </tr>
 </tbody></table></div>
@@ -160,120 +163,120 @@ td.empty { color:var(--muted); font-weight:400; }
 <tr><td class="time">07:00</td>
 <td class="empty">&ndash;</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(80,158,104,0.85)" title="Wednesday 07:00 &middot; n=1 &middot; single sample">48</td>
+<td class="cell single" style="background:rgba(63,154,107,0.85)" title="Thursday 07:00 &middot; n=1 &middot; single sample">46</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">07:15</td>
 <td class="empty">&ndash;</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(126,169,94,0.85)" title="Wednesday 07:15 &middot; n=1 &middot; single sample">55</td>
+<td class="cell single" style="background:rgba(75,157,105,0.85)" title="Thursday 07:15 &middot; n=1 &middot; single sample">48</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">07:30</td>
 <td class="empty">&ndash;</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(91,161,101,0.85)" title="Wednesday 07:30 &middot; n=1 &middot; single sample">50</td>
+<td class="cell single" style="background:rgba(95,161,101,0.85)" title="Thursday 07:30 &middot; n=1 &middot; single sample">50</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">07:45</td>
 <td class="empty">&ndash;</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(128,169,94,0.85)" title="Wednesday 07:45 &middot; n=1 &middot; single sample">55</td>
+<td class="cell single" style="background:rgba(137,171,92,0.85)" title="Thursday 07:45 &middot; n=1 &middot; single sample">57</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">08:00</td>
 <td class="empty">&ndash;</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(156,176,88,0.85)" title="Wednesday 08:00 &middot; n=1 &middot; single sample">60</td>
+<td class="cell single" style="background:rgba(150,175,89,0.85)" title="Thursday 08:00 &middot; n=1 &middot; single sample">59</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">08:15</td>
 <td class="empty">&ndash;</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(160,177,87,0.85)" title="Wednesday 08:15 &middot; n=1 &middot; single sample">60</td>
+<td class="cell single" style="background:rgba(144,173,90,0.85)" title="Thursday 08:15 &middot; n=1 &middot; single sample">58</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">08:30</td>
 <td class="empty">&ndash;</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(158,177,87,0.85)" title="Wednesday 08:30 &middot; n=1 &middot; single sample">60</td>
+<td class="cell single" style="background:rgba(147,174,90,0.85)" title="Thursday 08:30 &middot; n=1 &middot; single sample">58</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">08:45</td>
 <td class="empty">&ndash;</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(150,175,89,0.85)" title="Wednesday 08:45 &middot; n=1 &middot; single sample">59</td>
+<td class="cell single" style="background:rgba(150,175,89,0.85)" title="Thursday 08:45 &middot; n=1 &middot; single sample">59</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">09:00</td>
 <td class="empty">&ndash;</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(145,173,90,0.85)" title="Wednesday 09:00 &middot; n=1 &middot; single sample">58</td>
+<td class="cell single" style="background:rgba(142,173,91,0.85)" title="Thursday 09:00 &middot; n=1 &middot; single sample">58</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">09:15</td>
 <td class="empty">&ndash;</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(101,163,99,0.85)" title="Wednesday 09:15 &middot; n=1 &middot; single sample">51</td>
+<td class="cell single" style="background:rgba(109,165,97,0.85)" title="Thursday 09:15 &middot; n=1 &middot; single sample">53</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">09:30</td>
 <td class="empty">&ndash;</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(91,161,101,0.85)" title="Wednesday 09:30 &middot; n=1 &middot; single sample">50</td>
+<td class="cell single" style="background:rgba(91,161,101,0.85)" title="Thursday 09:30 &middot; n=1 &middot; single sample">50</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">09:45</td>
 <td class="empty">&ndash;</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(86,159,102,0.85)" title="Wednesday 09:45 &middot; n=1 &middot; single sample">49</td>
+<td class="cell single" style="background:rgba(84,159,103,0.85)" title="Thursday 09:45 &middot; n=1 &middot; single sample">49</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">10:00</td>
 <td class="empty">&ndash;</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(86,159,102,0.85)" title="Wednesday 10:00 &middot; n=1 &middot; single sample">49</td>
+<td class="cell single" style="background:rgba(82,159,103,0.85)" title="Thursday 10:00 &middot; n=1 &middot; single sample">49</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">10:15</td>
 <td class="empty">&ndash;</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(83,159,103,0.85)" title="Wednesday 10:15 &middot; n=1 &middot; single sample">49</td>
+<td class="cell single" style="background:rgba(85,159,103,0.85)" title="Thursday 10:15 &middot; n=1 &middot; single sample">49</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">10:30</td>
 <td class="empty">&ndash;</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(80,158,103,0.85)" title="Wednesday 10:30 &middot; n=1 &middot; single sample">48</td>
+<td class="cell single" style="background:rgba(81,158,103,0.85)" title="Thursday 10:30 &middot; n=1 &middot; single sample">48</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">10:45</td>
 <td class="empty">&ndash;</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(82,158,103,0.85)" title="Wednesday 10:45 &middot; n=1 &middot; single sample">49</td>
+<td class="cell single" style="background:rgba(77,157,104,0.85)" title="Thursday 10:45 &middot; n=1 &middot; single sample">48</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">11:00</td>
 <td class="empty">&ndash;</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(90,160,101,0.85)" title="Wednesday 11:00 &middot; n=1 &middot; single sample">50</td>
+<td class="cell single" style="background:rgba(83,159,103,0.85)" title="Thursday 11:00 &middot; n=1 &middot; single sample">49</td>
 <td class="empty">&ndash;</td>
 </tr>
 </tbody></table></div>
@@ -282,107 +285,107 @@ td.empty { color:var(--muted); font-weight:400; }
 <div class="scroll"><table><thead><tr><th class="time">Time</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th></tr></thead><tbody>
 <tr><td class="time">14:00</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(194,185,80,0.85)" title="Tuesday 14:00 &middot; n=1 &middot; single sample">71</td>
+<td class="cell single" style="background:rgba(218,191,75,0.85)" title="Wednesday 14:00 &middot; n=1 &middot; single sample">75</td>
+<td class="cell single" style="background:rgba(210,189,77,0.85)" title="Thursday 14:00 &middot; n=1 &middot; single sample">73</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">14:15</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(210,189,77,0.85)" title="Tuesday 14:15 &middot; n=1 &middot; single sample">73</td>
+<td class="cell single" style="background:rgba(221,191,75,0.85)" title="Wednesday 14:15 &middot; n=1 &middot; single sample">75</td>
+<td class="cell single" style="background:rgba(221,178,73,0.85)" title="Thursday 14:15 &middot; n=1 &middot; single sample">79</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">14:30</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(224,191,74,0.85)" title="Tuesday 14:30 &middot; n=1 &middot; single sample">76</td>
+<td class="cell single" style="background:rgba(220,173,72,0.85)" title="Wednesday 14:30 &middot; n=1 &middot; single sample">80</td>
+<td class="cell single" style="background:rgba(219,168,72,0.85)" title="Thursday 14:30 &middot; n=1 &middot; single sample">82</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">14:45</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(221,179,73,0.85)" title="Tuesday 14:45 &middot; n=1 &middot; single sample">79</td>
+<td class="cell single" style="background:rgba(218,164,71,0.85)" title="Wednesday 14:45 &middot; n=1 &middot; single sample">83</td>
+<td class="cell single" style="background:rgba(215,149,70,0.85)" title="Thursday 14:45 &middot; n=1 &middot; single sample">86</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">15:00</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(224,190,74,0.85)" title="Monday 15:00 &middot; n=1 &middot; single sample">76</td>
+<td class="cell single" style="background:rgba(219,169,72,0.85)" title="Tuesday 15:00 &middot; n=1 &middot; single sample">81</td>
+<td class="cell single" style="background:rgba(216,157,70,0.85)" title="Wednesday 15:00 &middot; n=1 &middot; single sample">84</td>
+<td class="cell single" style="background:rgba(209,124,67,0.85)" title="Thursday 15:00 &middot; n=1 &middot; single sample">92</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">15:15</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(213,144,69,0.85)" title="Tuesday 15:15 &middot; n=1 &middot; single sample">87</td>
+<td class="cell single" style="background:rgba(211,134,68,0.85)" title="Wednesday 15:15 &middot; n=1 &middot; single sample">90</td>
+<td class="cell single" style="background:rgba(206,110,66,0.85)" title="Thursday 15:15 &middot; n=1 &middot; single sample">96</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">15:30</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(212,135,68,0.85)" title="Tuesday 15:30 &middot; n=1 &middot; single sample">90</td>
+<td class="cell single" style="background:rgba(210,128,68,0.85)" title="Wednesday 15:30 &middot; n=1 &middot; single sample">91</td>
+<td class="cell single" style="background:rgba(206,108,66,0.85)" title="Thursday 15:30 &middot; n=1 &middot; single sample">96</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">15:45</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(206,111,66,0.85)" title="Tuesday 15:45 &middot; n=1 &middot; single sample">95</td>
+<td class="cell single" style="background:rgba(206,111,66,0.85)" title="Wednesday 15:45 &middot; n=1 &middot; single sample">95</td>
+<td class="cell single" style="background:rgba(205,103,65,0.85)" title="Thursday 15:45 &middot; n=1 &middot; single sample">97</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">16:00</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(205,104,65,0.85)" title="Tuesday 16:00 &middot; n=1 &middot; single sample">97</td>
+<td class="cell single" style="background:rgba(208,120,67,0.85)" title="Wednesday 16:00 &middot; n=1 &middot; single sample">93</td>
+<td class="cell single" style="background:rgba(205,105,65,0.85)" title="Thursday 16:00 &middot; n=1 &middot; single sample">97</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">16:15</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(205,106,65,0.85)" title="Tuesday 16:15 &middot; n=1 &middot; single sample">97</td>
+<td class="cell single" style="background:rgba(206,111,66,0.85)" title="Wednesday 16:15 &middot; n=1 &middot; single sample">95</td>
+<td class="cell single" style="background:rgba(200,82,63,0.85)" title="Thursday 16:15 &middot; n=1 &middot; single sample">102</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">16:30</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(206,111,66,0.85)" title="Tuesday 16:30 &middot; n=1 &middot; single sample">95</td>
+<td class="cell single" style="background:rgba(207,114,66,0.85)" title="Wednesday 16:30 &middot; n=1 &middot; single sample">95</td>
+<td class="cell single" style="background:rgba(203,97,65,0.85)" title="Thursday 16:30 &middot; n=1 &middot; single sample">99</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">16:45</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(209,123,67,0.85)" title="Tuesday 16:45 &middot; n=1 &middot; single sample">92</td>
+<td class="cell single" style="background:rgba(210,127,68,0.85)" title="Wednesday 16:45 &middot; n=1 &middot; single sample">91</td>
+<td class="cell single" style="background:rgba(205,103,65,0.85)" title="Thursday 16:45 &middot; n=1 &middot; single sample">97</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">17:00</td>
 <td class="cell" style="background:rgba(218,163,71,0.85)" title="Monday 17:00 &middot; n=2">83</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(210,126,67,0.85)" title="Tuesday 17:00 &middot; n=1 &middot; single sample">92</td>
+<td class="cell single" style="background:rgba(211,133,68,0.85)" title="Wednesday 17:00 &middot; n=1 &middot; single sample">90</td>
+<td class="cell single" style="background:rgba(206,111,66,0.85)" title="Thursday 17:00 &middot; n=1 &middot; single sample">95</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">17:15</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(219,171,72,0.85)" title="Monday 17:15 &middot; n=1 &middot; single sample">81</td>
+<td class="cell single" style="background:rgba(211,133,68,0.85)" title="Tuesday 17:15 &middot; n=1 &middot; single sample">90</td>
+<td class="cell single" style="background:rgba(210,128,68,0.85)" title="Wednesday 17:15 &middot; n=1 &middot; single sample">91</td>
+<td class="cell single" style="background:rgba(208,118,67,0.85)" title="Thursday 17:15 &middot; n=1 &middot; single sample">94</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">17:30</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(224,190,74,0.85)" title="Monday 17:30 &middot; n=1 &middot; single sample">76</td>
+<td class="cell single" style="background:rgba(214,145,69,0.85)" title="Tuesday 17:30 &middot; n=1 &middot; single sample">87</td>
+<td class="cell single" style="background:rgba(214,144,69,0.85)" title="Wednesday 17:30 &middot; n=1 &middot; single sample">87</td>
+<td class="cell single" style="background:rgba(209,125,67,0.85)" title="Thursday 17:30 &middot; n=1 &middot; single sample">92</td>
 <td class="empty">&ndash;</td>
 </tr>
 </tbody></table></div>
@@ -390,115 +393,133 @@ td.empty { color:var(--muted); font-weight:400; }
 <div class="scroll"><table><thead><tr><th class="time">Time</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th></tr></thead><tbody>
 <tr><td class="time">14:00</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(64,154,107,0.85)" title="Tuesday 14:00 &middot; n=1 &middot; single sample">49</td>
+<td class="cell single" style="background:rgba(63,154,107,0.85)" title="Wednesday 14:00 &middot; n=1 &middot; single sample">49</td>
+<td class="cell single" style="background:rgba(65,155,107,0.85)" title="Thursday 14:00 &middot; n=1 &middot; single sample">49</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">14:15</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(63,154,107,0.85)" title="Tuesday 14:15 &middot; n=1 &middot; single sample">49</td>
+<td class="cell single" style="background:rgba(68,155,106,0.85)" title="Wednesday 14:15 &middot; n=1 &middot; single sample">50</td>
+<td class="cell single" style="background:rgba(68,155,106,0.85)" title="Thursday 14:15 &middot; n=1 &middot; single sample">50</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">14:30</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(64,154,107,0.85)" title="Tuesday 14:30 &middot; n=1 &middot; single sample">49</td>
+<td class="cell single" style="background:rgba(76,157,104,0.85)" title="Wednesday 14:30 &middot; n=1 &middot; single sample">51</td>
+<td class="cell single" style="background:rgba(69,155,106,0.85)" title="Thursday 14:30 &middot; n=1 &middot; single sample">50</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">14:45</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(71,156,105,0.85)" title="Tuesday 14:45 &middot; n=1 &middot; single sample">50</td>
+<td class="cell single" style="background:rgba(78,158,104,0.85)" title="Wednesday 14:45 &middot; n=1 &middot; single sample">52</td>
+<td class="cell single" style="background:rgba(72,156,105,0.85)" title="Thursday 14:45 &middot; n=1 &middot; single sample">50</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">15:00</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(84,159,103,0.85)" title="Monday 15:00 &middot; n=1 &middot; single sample">52</td>
+<td class="cell single" style="background:rgba(80,158,104,0.85)" title="Tuesday 15:00 &middot; n=1 &middot; single sample">52</td>
+<td class="cell single" style="background:rgba(84,159,103,0.85)" title="Wednesday 15:00 &middot; n=1 &middot; single sample">52</td>
+<td class="cell single" style="background:rgba(92,161,101,0.85)" title="Thursday 15:00 &middot; n=1 &middot; single sample">54</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">15:15</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(97,162,100,0.85)" title="Tuesday 15:15 &middot; n=1 &middot; single sample">55</td>
+<td class="cell single" style="background:rgba(90,160,102,0.85)" title="Wednesday 15:15 &middot; n=1 &middot; single sample">53</td>
+<td class="cell single" style="background:rgba(96,162,100,0.85)" title="Thursday 15:15 &middot; n=1 &middot; single sample">54</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">15:30</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(141,172,91,0.85)" title="Tuesday 15:30 &middot; n=1 &middot; single sample">62</td>
+<td class="cell single" style="background:rgba(105,164,98,0.85)" title="Wednesday 15:30 &middot; n=1 &middot; single sample">56</td>
+<td class="cell single" style="background:rgba(111,165,97,0.85)" title="Thursday 15:30 &middot; n=1 &middot; single sample">57</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">15:45</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(159,177,87,0.85)" title="Tuesday 15:45 &middot; n=1 &middot; single sample">65</td>
+<td class="cell single" style="background:rgba(120,168,95,0.85)" title="Wednesday 15:45 &middot; n=1 &middot; single sample">58</td>
+<td class="cell single" style="background:rgba(127,169,94,0.85)" title="Thursday 15:45 &middot; n=1 &middot; single sample">60</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">16:00</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(173,180,85,0.85)" title="Tuesday 16:00 &middot; n=1 &middot; single sample">67</td>
+<td class="cell single" style="background:rgba(133,171,93,0.85)" title="Wednesday 16:00 &middot; n=1 &middot; single sample">61</td>
+<td class="cell single" style="background:rgba(137,171,92,0.85)" title="Thursday 16:00 &middot; n=1 &middot; single sample">61</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">16:15</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(182,182,83,0.85)" title="Tuesday 16:15 &middot; n=1 &middot; single sample">69</td>
+<td class="cell single" style="background:rgba(158,176,87,0.85)" title="Wednesday 16:15 &middot; n=1 &middot; single sample">65</td>
+<td class="cell single" style="background:rgba(142,173,91,0.85)" title="Thursday 16:15 &middot; n=1 &middot; single sample">62</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">16:30</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(181,182,83,0.85)" title="Tuesday 16:30 &middot; n=1 &middot; single sample">68</td>
+<td class="cell single" style="background:rgba(167,179,86,0.85)" title="Wednesday 16:30 &middot; n=1 &middot; single sample">66</td>
+<td class="cell single" style="background:rgba(165,178,86,0.85)" title="Thursday 16:30 &middot; n=1 &middot; single sample">66</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">16:45</td>
 <td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(175,180,84,0.85)" title="Tuesday 16:45 &middot; n=1 &middot; single sample">68</td>
+<td class="cell single" style="background:rgba(178,181,83,0.85)" title="Wednesday 16:45 &middot; n=1 &middot; single sample">68</td>
+<td class="cell single" style="background:rgba(178,181,84,0.85)" title="Thursday 16:45 &middot; n=1 &middot; single sample">68</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">17:00</td>
 <td class="cell" style="background:rgba(96,162,100,0.85)" title="Monday 17:00 &middot; n=2">54</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(180,182,83,0.85)" title="Tuesday 17:00 &middot; n=1 &middot; single sample">68</td>
+<td class="cell single" style="background:rgba(179,181,83,0.85)" title="Wednesday 17:00 &middot; n=1 &middot; single sample">68</td>
+<td class="cell single" style="background:rgba(182,182,83,0.85)" title="Thursday 17:00 &middot; n=1 &middot; single sample">69</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">17:15</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(88,160,102,0.85)" title="Monday 17:15 &middot; n=1 &middot; single sample">53</td>
+<td class="cell single" style="background:rgba(176,181,84,0.85)" title="Tuesday 17:15 &middot; n=1 &middot; single sample">68</td>
+<td class="cell single" style="background:rgba(170,179,85,0.85)" title="Wednesday 17:15 &middot; n=1 &middot; single sample">67</td>
+<td class="cell single" style="background:rgba(172,180,85,0.85)" title="Thursday 17:15 &middot; n=1 &middot; single sample">67</td>
 <td class="empty">&ndash;</td>
 </tr>
 <tr><td class="time">17:30</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(87,160,102,0.85)" title="Monday 17:30 &middot; n=1 &middot; single sample">53</td>
+<td class="cell single" style="background:rgba(138,172,92,0.85)" title="Tuesday 17:30 &middot; n=1 &middot; single sample">61</td>
+<td class="cell single" style="background:rgba(150,175,89,0.85)" title="Wednesday 17:30 &middot; n=1 &middot; single sample">64</td>
+<td class="cell single" style="background:rgba(161,177,87,0.85)" title="Thursday 17:30 &middot; n=1 &middot; single sample">65</td>
 <td class="empty">&ndash;</td>
 </tr>
 </tbody></table></div>
 <h2>Best departure windows</h2>
 <div class="card"><h3>Morning - home to office</h3><table><thead><tr><th class="time">Home</th><th>Day</th><th>Depart</th><th>Median</th><th>n</th></tr></thead><tbody>
+<tr><td class="time">home2</td><td>Thursday</td><td>07:00</td><td><strong>46 min</strong></td><td>1</td></tr>
+<tr><td class="time">home2</td><td>Thursday</td><td>07:15</td><td><strong>48 min</strong></td><td>1</td></tr>
+<tr><td class="time">home2</td><td>Thursday</td><td>10:45</td><td><strong>48 min</strong></td><td>1</td></tr>
+<tr><td class="time">home2</td><td>Wednesday</td><td>07:00</td><td><strong>48 min</strong></td><td>1</td></tr>
+<tr><td class="time">home2</td><td>Wednesday</td><td>10:30</td><td><strong>48 min</strong></td><td>1</td></tr>
+<tr><td class="time">home2</td><td>Thursday</td><td>10:30</td><td><strong>48 min</strong></td><td>1</td></tr>
+<tr><td class="time">home2</td><td>Wednesday</td><td>10:45</td><td><strong>49 min</strong></td><td>1</td></tr>
+<tr><td class="time">home2</td><td>Thursday</td><td>10:00</td><td><strong>49 min</strong></td><td>1</td></tr>
+<tr><td class="time">home2</td><td>Thursday</td><td>11:00</td><td><strong>49 min</strong></td><td>1</td></tr>
+<tr><td class="time">home2</td><td>Wednesday</td><td>10:15</td><td><strong>49 min</strong></td><td>1</td></tr>
 </tbody></table></div>
 <div class="card"><h3>Afternoon - office to home</h3><table><thead><tr><th class="time">Home</th><th>Day</th><th>Depart</th><th>Median</th><th>n</th></tr></thead><tbody>
-<tr><td class="time">home2</td><td>Monday</td><td>17:00</td><td><strong>54 min</strong></td><td>2</td></tr>
-<tr><td class="time">home1</td><td>Monday</td><td>17:00</td><td><strong>83 min</strong></td><td>2</td></tr>
+<tr><td class="time">home2</td><td>Tuesday</td><td>14:15</td><td><strong>49 min</strong></td><td>1</td></tr>
+<tr><td class="time">home2</td><td>Wednesday</td><td>14:00</td><td><strong>49 min</strong></td><td>1</td></tr>
+<tr><td class="time">home2</td><td>Tuesday</td><td>14:00</td><td><strong>49 min</strong></td><td>1</td></tr>
+<tr><td class="time">home2</td><td>Tuesday</td><td>14:30</td><td><strong>49 min</strong></td><td>1</td></tr>
+<tr><td class="time">home2</td><td>Thursday</td><td>14:00</td><td><strong>49 min</strong></td><td>1</td></tr>
+<tr><td class="time">home2</td><td>Thursday</td><td>14:15</td><td><strong>50 min</strong></td><td>1</td></tr>
+<tr><td class="time">home2</td><td>Wednesday</td><td>14:15</td><td><strong>50 min</strong></td><td>1</td></tr>
+<tr><td class="time">home2</td><td>Thursday</td><td>14:30</td><td><strong>50 min</strong></td><td>1</td></tr>
+<tr><td class="time">home2</td><td>Tuesday</td><td>14:45</td><td><strong>50 min</strong></td><td>1</td></tr>
+<tr><td class="time">home2</td><td>Thursday</td><td>14:45</td><td><strong>50 min</strong></td><td>1</td></tr>
 </tbody></table></div>
 </div>

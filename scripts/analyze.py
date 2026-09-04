@@ -9,7 +9,7 @@ Reads every data/commute_*.csv, then writes:
 Median is used rather than mean throughout: a single accident on one Tuesday
 should not decide which day you drive in.
 
-Usage:  python3 scripts/analyze.py [--min-samples 2]
+Usage:  python3 scripts/analyze.py [--min-samples N]
 """
 
 from __future__ import annotations
@@ -84,8 +84,13 @@ def markdown_report(rows, homes, min_samples) -> str:
         f"- Samples: **{len(rows):,}** across **{len(dates)}** days "
         f"({dates[0]} to {dates[-1]})" if dates else "- No samples yet",
         f"- Generated {datetime.now().strftime('%Y-%m-%d %H:%M')} local",
-        f"- Cells show the **median** drive time in minutes; `-` means fewer "
-        f"than {min_samples} samples.",
+        (f"- Cells show the **median** drive time in minutes; `-` means no "
+         f"sample yet." if min_samples <= 1 else
+         f"- Cells show the **median** drive time in minutes; `-` means fewer "
+         f"than {min_samples} samples."),
+        ("- Cells marked \u00b0 rest on a single sample -- one reading, not a "
+         "median. Treat them as provisional until that weekday recurs."
+         if min_samples < 2 else ""),
         "",
     ]
 
@@ -102,8 +107,13 @@ def markdown_report(rows, homes, min_samples) -> str:
                 cells = []
                 for day in WEEKDAYS:
                     values = grid.get((day, slot), [])
-                    cells.append(fmt(statistics.median(values))
-                                 if len(values) >= min_samples else "-")
+                    if len(values) < min_samples:
+                        cells.append("-")
+                    else:
+                        # A single reading is not a median; flag it so a
+                        # provisional number is never mistaken for a settled one.
+                        mark = "\u00b0" if len(values) == 1 else ""
+                        cells.append(fmt(statistics.median(values)) + mark)
                 out.append(f"| {slot} | " + " | ".join(cells) + " |")
             out.append("")
 
@@ -180,6 +190,8 @@ th, td { padding:7px 10px; text-align:center; border-bottom:1px solid var(--line
 th { font-weight:600; font-size:13px; color:var(--muted); text-align:center; }
 td.time, th.time { text-align:left; color:var(--muted); font-size:13px; }
 td.cell { color:#12100e; font-weight:600; border-radius:3px; }
+/* One reading, not a median: dimmed and dashed so it reads as provisional. */
+td.cell.single { opacity:.62; outline:1px dashed rgba(0,0,0,.38); outline-offset:-2px; }
 td.empty { color:var(--muted); font-weight:400; }
 .legend { display:flex; align-items:center; gap:8px; color:var(--muted);
   font-size:13px; margin:10px 0 0; }
@@ -209,6 +221,9 @@ def html_report(rows, homes, min_samples) -> str:
         f"<style>{CSS}</style>",
         '<div class="wrap">',
         "<h1>Commute time report</h1>",
+        (('<p class="sub">Faded, dashed cells rest on a single sample &mdash; '
+          'one reading, not a median. Provisional until that weekday recurs.</p>')
+         if min_samples < 2 else ""),
         f'<p class="sub">{len(rows):,} samples over {len(dates)} days'
         + (f", {dates[0]} to {dates[-1]}" if dates else "")
         + ". Median driving minutes, live traffic.</p>",
@@ -239,9 +254,14 @@ def html_report(rows, homes, min_samples) -> str:
                         parts.append('<td class="empty">&ndash;</td>')
                         continue
                     median = statistics.median(values)
+                    # A single reading is not a median. Mark it so a
+                    # provisional number is never read as a settled one.
+                    single = " single" if len(values) == 1 else ""
                     parts.append(
-                        f'<td class="cell" style="background:{colour(median, lo, hi)}" '
-                        f'title="{day} {slot} &middot; n={len(values)}">'
+                        f'<td class="cell{single}" '
+                        f'style="background:{colour(median, lo, hi)}" '
+                        f'title="{day} {slot} &middot; n={len(values)}'
+                        f'{" &middot; single sample" if len(values) == 1 else ""}">'
                         f"{median:.0f}</td>"
                     )
                 parts.append("</tr>")
@@ -275,7 +295,7 @@ def html_report(rows, homes, min_samples) -> str:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--min-samples", type=int, default=2,
+    parser.add_argument("--min-samples", type=int, default=1,
                         help="cells with fewer samples than this are left blank")
     args = parser.parse_args()
 

@@ -24,6 +24,7 @@ from datetime import datetime
 from config import (
     AFTERNOON,
     DATA_DIR,
+    LOCAL_TZ,
     MORNING,
     REPO_ROOT,
     SAMPLE_INTERVAL_MIN,
@@ -55,6 +56,14 @@ def load_rows() -> list[dict]:
     return rows
 
 
+def to12(slot: str) -> str:
+    """'07:15' -> '7:15 AM'. Slots are already Pacific local time."""
+    hh, mm = (int(x) for x in slot.split(":"))
+    suffix = "AM" if hh < 12 else "PM"
+    hour = hh % 12 or 12
+    return f"{hour}:{mm:02d} {suffix}"
+
+
 def slots_for(window: tuple[int, int]) -> list[str]:
     start, end = window
     return [slot_label(m) for m in range(start, end + 1, SAMPLE_INTERVAL_MIN)]
@@ -83,7 +92,8 @@ def markdown_report(rows, homes, min_samples) -> str:
     out += [
         f"- Samples: **{len(rows):,}** across **{len(dates)}** days "
         f"({dates[0]} to {dates[-1]})" if dates else "- No samples yet",
-        f"- Generated {datetime.now().strftime('%Y-%m-%d %H:%M')} local",
+        f"- Generated {datetime.now(LOCAL_TZ).strftime('%Y-%m-%d %-I:%M %p')} "
+        f"Pacific; all times below are Pacific local.",
         (f"- Cells show the **median** drive time in minutes; `-` means no "
          f"sample yet." if min_samples <= 1 else
          f"- Cells show the **median** drive time in minutes; `-` means fewer "
@@ -114,24 +124,31 @@ def markdown_report(rows, homes, min_samples) -> str:
                         # provisional number is never mistaken for a settled one.
                         mark = "\u00b0" if len(values) == 1 else ""
                         cells.append(fmt(statistics.median(values)) + mark)
-                out.append(f"| {slot} | " + " | ".join(cells) + " |")
+                out.append(f"| {to12(slot)} | " + " | ".join(cells) + " |")
             out.append("")
 
     out += ["## Best departure windows", ""]
+    # Ranked separately per home. A combined table just sorts by absolute
+    # minutes, so the nearer home takes every row and the further home -- the
+    # one whose departure time actually matters -- never appears at all.
     for direction, title, _ in DIRECTIONS:
-        out += [f"### {title}", "",
-                "| Rank | Home | Day | Depart | Median min | Samples |",
-                "|---|---|---|---|---|---|"]
-        ranked = []
+        out += [f"### {title}", ""]
         for home in homes:
+            ranked = []
             for (day, slot), values in build_grid(rows, direction, home).items():
                 if len(values) >= min_samples:
-                    ranked.append((statistics.median(values), home, day, slot,
+                    ranked.append((statistics.median(values), day, slot,
                                    len(values)))
-        ranked.sort()
-        for i, (median, home, day, slot, n) in enumerate(ranked[:10], 1):
-            out.append(f"| {i} | {home} | {day} | {slot} | {median:.0f} | {n} |")
-        out.append("")
+            ranked.sort()
+            out += [f"**{home}**", "",
+                    "| Rank | Day | Depart | Median min | Samples |",
+                    "|---|---|---|---|---|"]
+            for i, (median, day, slot, n) in enumerate(ranked[:10], 1):
+                mark = "\u00b0" if n == 1 else ""
+                out.append(f"| {i} | {day} | {to12(slot)} | {median:.0f}{mark} | {n} |")
+            if not ranked:
+                out.append("| - | - | - | - | - |")
+            out.append("")
 
     out += ["## Home vs home", "",
             "| Direction | Home | Overall median | Best day | Worst day |",
@@ -224,6 +241,7 @@ def html_report(rows, homes, min_samples) -> str:
         (('<p class="sub">Faded, dashed cells rest on a single sample &mdash; '
           'one reading, not a median. Provisional until that weekday recurs.</p>')
          if min_samples < 2 else ""),
+        '<p class="sub">All times Pacific local.</p>',
         f'<p class="sub">{len(rows):,} samples over {len(dates)} days'
         + (f", {dates[0]} to {dates[-1]}" if dates else "")
         + ". Median driving minutes, live traffic.</p>",
@@ -247,7 +265,7 @@ def html_report(rows, homes, min_samples) -> str:
                          + "".join(f"<th>{d[:3]}</th>" for d in WEEKDAYS)
                          + "</tr></thead><tbody>")
             for slot in slots:
-                parts.append(f'<tr><td class="time">{slot}</td>')
+                parts.append(f'<tr><td class="time">{to12(slot)}</td>')
                 for day in WEEKDAYS:
                     values = grid.get((day, slot), [])
                     if len(values) < min_samples:
@@ -260,7 +278,7 @@ def html_report(rows, homes, min_samples) -> str:
                     parts.append(
                         f'<td class="cell{single}" '
                         f'style="background:{colour(median, lo, hi)}" '
-                        f'title="{day} {slot} &middot; n={len(values)}'
+                        f'title="{day} {to12(slot)} &middot; n={len(values)}'
                         f'{" &middot; single sample" if len(values) == 1 else ""}">'
                         f"{median:.0f}</td>"
                     )
@@ -268,24 +286,30 @@ def html_report(rows, homes, min_samples) -> str:
             parts.append("</tbody></table></div>")
 
     parts.append("<h2>Best departure windows</h2>")
+    # Ranked separately per home: a combined table sorts by absolute minutes,
+    # so the nearer home takes every row and the further home never appears.
     for direction, title, _ in DIRECTIONS:
-        ranked = []
         for home in homes:
+            ranked = []
             for (day, slot), values in build_grid(rows, direction, home).items():
                 if len(values) >= min_samples:
-                    ranked.append((statistics.median(values), home, day, slot,
+                    ranked.append((statistics.median(values), day, slot,
                                    len(values)))
-        ranked.sort()
-        parts.append(f'<div class="card"><h3>{html.escape(title)}</h3>'
-                     '<table><thead><tr><th class="time">Home</th><th>Day</th>'
-                     "<th>Depart</th><th>Median</th><th>n</th></tr></thead><tbody>")
-        for median, home, day, slot, n in ranked[:10]:
-            parts.append(
-                f'<tr><td class="time">{html.escape(home)}</td><td>{day}</td>'
-                f"<td>{slot}</td><td><strong>{median:.0f} min</strong></td>"
-                f"<td>{n}</td></tr>"
-            )
-        parts.append("</tbody></table></div>")
+            ranked.sort()
+            parts.append(f'<div class="card">'
+                         f'<h3>{html.escape(title)} &middot; {html.escape(home)}</h3>'
+                         '<table><thead><tr><th class="time">Day</th>'
+                         "<th>Depart</th><th>Median</th><th>n</th></tr></thead><tbody>")
+            for median, day, slot, n in ranked[:10]:
+                parts.append(
+                    f'<tr><td class="time">{day}</td>'
+                    f"<td>{to12(slot)}</td><td><strong>{median:.0f} min</strong></td>"
+                    f"<td>{n}</td></tr>"
+                )
+            if not ranked:
+                parts.append('<tr><td class="time">&ndash;</td><td>&ndash;</td>'
+                             "<td>&ndash;</td><td>&ndash;</td></tr>")
+            parts.append("</tbody></table></div>")
 
     parts.append("</div>")
     return "\n".join(parts)

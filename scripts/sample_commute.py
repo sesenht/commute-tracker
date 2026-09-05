@@ -5,8 +5,8 @@ Runs from GitHub Actions every 15 minutes. Each invocation decides for itself
 whether the current Pacific local time falls inside a sampling window; if not it
 exits quietly without spending an API call.
 
-  morning   07:00-11:00 PT, Mon-Fri, home -> office
-  afternoon 14:00-17:30 PT, Mon-Fri, office -> home
+  morning   07:00-11:00 PT, every day, home -> office
+  afternoon 14:00-17:30 PT, every day, office -> home
 
 Results are appended to data/commute_YYYY-MM.csv.
 """
@@ -55,9 +55,8 @@ MAX_ATTEMPTS = 4
 
 def classify(local_dt) -> tuple[str, str, int] | None:
     """Return (period, direction, slot_minutes) or None if outside a window."""
-    if local_dt.weekday() > 4:  # Saturday / Sunday
-        return None
-
+    # Every day is sampled, weekends included: a weekend baseline is what makes
+    # the weekday congestion numbers mean something.
     minutes = local_dt.hour * 60 + local_dt.minute
 
     for period, (start, end), direction in (

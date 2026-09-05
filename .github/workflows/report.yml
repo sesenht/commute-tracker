@@ -1,10 +1,21 @@
 name: Rebuild commute report
 
-# Saturday 09:00 PT (16:00 UTC in summer). Timing is not critical here, so a
-# single UTC hour is fine.
+# Rebuilt right after each sampling window closes, so the report reflects a
+# window as soon as it is complete rather than up to a week later.
+#
+#   morning   ends 11:00 PT -> rebuild 11:15 PT
+#   afternoon ends 17:30 PT -> rebuild 18:00 PT ("at night")
+#
+# Pacific is UTC-7 (PDT) in summer and UTC-8 (PST) in winter, and cron has no
+# time zone, so each rebuild fires at both offsets. The off-offset run finds the
+# report already current and exits without committing, so the cost is one no-op
+# job -- much cheaper than getting the hour wrong for half the year.
 on:
   schedule:
-    - cron: "0 16 * * 6"
+    - cron: "15 18 * * *"   # 11:15 PT (PDT) -- after the morning window
+    - cron: "15 19 * * *"   # 11:15 PT (PST) -- after the morning window
+    - cron: "0 1 * * *"     # 18:00 PT (PDT) -- after the afternoon window
+    - cron: "0 2 * * *"     # 18:00 PT (PST) -- after the afternoon window
   workflow_dispatch:
 
 concurrency:

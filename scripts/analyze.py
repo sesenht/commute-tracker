@@ -31,7 +31,10 @@ from config import (
     slot_label,
 )
 
-WEEKDAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+# Every day, weekends included -- the weekend rows are the baseline that
+# makes the weekday congestion numbers legible.
+WEEKDAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday",
+            "Saturday", "Sunday"]
 
 DIRECTIONS = [
     ("home_to_office", "Morning - home to office", MORNING),

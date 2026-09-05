@@ -8,12 +8,12 @@ cheapest to drive.
 
 | | |
 |---|---|
-| **Morning** | 07:00–11:00 PT, Mon–Fri, each home → office |
-| **Afternoon** | 14:00–17:30 PT, Mon–Fri, office → each home |
+| **Morning** | 07:00–11:00 PT, every day, each home → office |
+| **Afternoon** | 14:00–17:30 PT, every day, office → each home |
 | **Cadence** | every 15 minutes → 32 samples/day, 64 API calls/day |
 | **Trigger** | Cloudflare Worker cron → `workflow_dispatch` |
 | **Log** | `data/commute_YYYY-MM.csv`, committed by the workflow |
-| **Report** | `report.md` + `report.html`, rebuilt weekly |
+| **Report** | `report.md` + `report.html`, rebuilt after each window |
 
 ## Why the API and not google.com/maps
 
@@ -24,8 +24,8 @@ changes, trips bot detection, and violates the Maps ToS. The API returns the
 number directly, in ~300 ms, and it is free at this volume.
 
 **Cost: $0.** Traffic-aware `computeRoutes` bills under the Routes **Pro** SKU,
-which includes 5,000 free calls per month. This job uses about **1,390/month**
-(64/day × ~21.7 weekdays) — roughly 28% of the allowance. Billing must still be
+which includes 5,000 free calls per month. This job uses about **1,950/month**
+(64/day × ~30.4 days) — roughly 39% of the allowance. Billing must still be
 enabled on the Google Cloud project, so put a budget alert at $1 if you want a
 tripwire.
 

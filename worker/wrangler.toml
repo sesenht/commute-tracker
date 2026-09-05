@@ -2,16 +2,23 @@ name = "commute-tracker-cron"
 main = "worker.js"
 compatibility_date = "2025-01-01"
 
-# All times UTC. Pacific is UTC-7 in summer (PDT) and UTC-8 in winter (PST), so
-# these hours are the union of both offsets and sample_commute.py decides
-# whether the current *local* time is actually inside a window. Same approach as
-# .github/workflows/sample.yml, kept deliberately in sync with it.
+# All times UTC, every day of the week.
+#
+# The day-of-week field is deliberately gone. It was "1-5"/"2-6" meaning
+# Mon-Fri, but Cloudflare numbers this field with 1=Sunday, so those ranges
+# actually meant Sun-Thu and Mon-Fri respectively: Friday never fired a single
+# morning sample, and the whole of Fri 2026-09-04 was lost. Running every day
+# and letting sample_commute.py decide is simpler and cannot drift -- it
+# already drops weekends, so Sat/Sun ticks cost one no-op run each.
+#
+# Pacific is UTC-7 in summer (PDT) and UTC-8 in winter (PST), so these hours
+# are the union of both offsets; sample_commute.py checks the actual local time.
 #
 #   07:00-11:00 PT  ->  14:00-19:00 UTC
 #   14:00-17:30 PT  ->  20:00-01:30 UTC  (rolls past UTC midnight)
 [triggers]
 crons = [
-  "0,15,30,45 14-19 * * 1-5",   # morning window, both DST offsets
-  "0,15,30,45 20-23 * * 1-5",   # afternoon window, both DST offsets
-  "0,15,30,45 0-1  * * 2-6",    # afternoon window, spilling past UTC midnight
+  "0,15,30,45 14-19 * * *",   # morning window, both DST offsets
+  "0,15,30,45 20-23 * * *",   # afternoon window, same UTC day
+  "0,15,30,45 0-1  * * *",    # afternoon window, spilling past UTC midnight
 ]

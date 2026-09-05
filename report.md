@@ -1,7 +1,7 @@
 # Commute time report
 
-- Samples: **172** across **5** days (2026-08-31 to 2026-09-05)
-- Generated 2026-09-05 2:12 PM Pacific; all times below are Pacific local.
+- Samples: **180** across **5** days (2026-08-31 to 2026-09-05)
+- Generated 2026-09-05 3:14 PM Pacific; all times below are Pacific local.
 - Cells show the **median** drive time in minutes; `-` means no sample yet.
 - Cells marked ° rest on a single sample -- one reading, not a median. Treat them as provisional until that weekday recurs.
 
@@ -58,10 +58,10 @@
 | Time | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday |
 |---|---|---|---|---|---|---|---|
 | 2:00 PM | - | 71° | 75° | 73° | - | 60° | - |
-| 2:15 PM | - | 73° | 75° | 79° | - | - | - |
-| 2:30 PM | - | 76° | 80° | 82° | - | - | - |
-| 2:45 PM | - | 79° | 83° | 86° | - | - | - |
-| 3:00 PM | 76° | 81° | 84° | 92° | - | - | - |
+| 2:15 PM | - | 73° | 75° | 79° | - | 60° | - |
+| 2:30 PM | - | 76° | 80° | 82° | - | 59° | - |
+| 2:45 PM | - | 79° | 83° | 86° | - | 59° | - |
+| 3:00 PM | 76° | 81° | 84° | 92° | - | 58° | - |
 | 3:15 PM | - | 87° | 90° | 96° | - | - | - |
 | 3:30 PM | - | 90° | 91° | 96° | - | - | - |
 | 3:45 PM | - | 95° | 95° | 97° | - | - | - |
@@ -78,10 +78,10 @@
 | Time | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday |
 |---|---|---|---|---|---|---|---|
 | 2:00 PM | - | 49° | 49° | 49° | - | 49° | - |
-| 2:15 PM | - | 49° | 50° | 50° | - | - | - |
-| 2:30 PM | - | 49° | 51° | 50° | - | - | - |
-| 2:45 PM | - | 50° | 52° | 50° | - | - | - |
-| 3:00 PM | 52° | 52° | 52° | 54° | - | - | - |
+| 2:15 PM | - | 49° | 50° | 50° | - | 48° | - |
+| 2:30 PM | - | 49° | 51° | 50° | - | 47° | - |
+| 2:45 PM | - | 50° | 52° | 50° | - | 47° | - |
+| 3:00 PM | 52° | 52° | 52° | 54° | - | 47° | - |
 | 3:15 PM | - | 55° | 53° | 54° | - | - | - |
 | 3:30 PM | - | 62° | 56° | 57° | - | - | - |
 | 3:45 PM | - | 65° | 58° | 60° | - | - | - |
@@ -133,31 +133,31 @@
 
 | Rank | Day | Depart | Median min | Samples |
 |---|---|---|---|---|
-| 1 | Saturday | 2:00 PM | 60° | 1 |
-| 2 | Tuesday | 2:00 PM | 71° | 1 |
-| 3 | Thursday | 2:00 PM | 73° | 1 |
-| 4 | Tuesday | 2:15 PM | 73° | 1 |
-| 5 | Wednesday | 2:00 PM | 75° | 1 |
-| 6 | Wednesday | 2:15 PM | 75° | 1 |
-| 7 | Tuesday | 2:30 PM | 76° | 1 |
-| 8 | Monday | 3:00 PM | 76° | 1 |
-| 9 | Monday | 5:30 PM | 76° | 1 |
-| 10 | Tuesday | 2:45 PM | 79° | 1 |
+| 1 | Saturday | 3:00 PM | 58° | 1 |
+| 2 | Saturday | 2:45 PM | 59° | 1 |
+| 3 | Saturday | 2:30 PM | 59° | 1 |
+| 4 | Saturday | 2:00 PM | 60° | 1 |
+| 5 | Saturday | 2:15 PM | 60° | 1 |
+| 6 | Tuesday | 2:00 PM | 71° | 1 |
+| 7 | Thursday | 2:00 PM | 73° | 1 |
+| 8 | Tuesday | 2:15 PM | 73° | 1 |
+| 9 | Wednesday | 2:00 PM | 75° | 1 |
+| 10 | Wednesday | 2:15 PM | 75° | 1 |
 
 **home2**
 
 | Rank | Day | Depart | Median min | Samples |
 |---|---|---|---|---|
-| 1 | Tuesday | 2:15 PM | 49° | 1 |
-| 2 | Wednesday | 2:00 PM | 49° | 1 |
-| 3 | Tuesday | 2:00 PM | 49° | 1 |
-| 4 | Tuesday | 2:30 PM | 49° | 1 |
-| 5 | Saturday | 2:00 PM | 49° | 1 |
-| 6 | Thursday | 2:00 PM | 49° | 1 |
-| 7 | Thursday | 2:15 PM | 50° | 1 |
-| 8 | Wednesday | 2:15 PM | 50° | 1 |
-| 9 | Thursday | 2:30 PM | 50° | 1 |
-| 10 | Tuesday | 2:45 PM | 50° | 1 |
+| 1 | Saturday | 2:30 PM | 47° | 1 |
+| 2 | Saturday | 2:45 PM | 47° | 1 |
+| 3 | Saturday | 3:00 PM | 47° | 1 |
+| 4 | Saturday | 2:15 PM | 48° | 1 |
+| 5 | Tuesday | 2:15 PM | 49° | 1 |
+| 6 | Wednesday | 2:00 PM | 49° | 1 |
+| 7 | Tuesday | 2:00 PM | 49° | 1 |
+| 8 | Tuesday | 2:30 PM | 49° | 1 |
+| 9 | Saturday | 2:00 PM | 49° | 1 |
+| 10 | Thursday | 2:00 PM | 49° | 1 |
 
 ## Home vs home
 
@@ -165,5 +165,5 @@
 |---|---|---|---|---|
 | Morning - home to office | home1 | 86 min | Saturday (56 min) | Wednesday (87 min) |
 | Morning - home to office | home2 | 50 min | Saturday (44 min) | Wednesday (50 min) |
-| Afternoon - office to home | home1 | 90 min | Saturday (60 min) | Thursday (95 min) |
-| Afternoon - office to home | home2 | 57 min | Saturday (49 min) | Tuesday (62 min) |
+| Afternoon - office to home | home1 | 90 min | Saturday (59 min) | Thursday (95 min) |
+| Afternoon - office to home | home2 | 55 min | Saturday (47 min) | Tuesday (62 min) |

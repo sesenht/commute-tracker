@@ -1,9 +1,18 @@
 name: Sample commute times
 
+# The only workflow in this repo. One run does the whole cycle:
+#
+#   sample the routes -> rebuild the report -> commit and push both
+#
+# The report is not a separate job on its own cron. GitHub's scheduler is
+# best-effort and skipped the report rebuild on its first day, leaving a
+# finished window unreported; building it here means the report always ships in
+# the same commit as the rows it describes, and cannot go stale.
+#
 # Scheduling lives in the Cloudflare Worker (see worker/ and the README), not
-# here. GitHub's cron is best-effort and silently skips slots under load, which
-# puts holes in the time-of-day curve at exactly the busy hours that matter.
-# The Worker fires workflow_dispatch on time instead; this workflow only ever
+# here, for the same reason: GitHub's cron silently skips slots under load,
+# which puts holes in the time-of-day curve at exactly the busy hours that
+# matter. The Worker fires workflow_dispatch on time; this workflow only ever
 # runs on demand.
 on:
   workflow_dispatch:
@@ -44,7 +53,7 @@ jobs:
             ${{ inputs.force && '--force' || '' }} \
             ${{ inputs.mock && '--mock' || '' }}
 
-      - name: Commit the log and the report
+      - name: Refresh the report and push
         run: |
           set -euo pipefail
           if [ -z "$(git status --porcelain data)" ]; then

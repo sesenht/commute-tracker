@@ -13,7 +13,7 @@ cheapest to drive.
 | **Cadence** | every 15 minutes → 32 samples/day, 64 API calls/day |
 | **Trigger** | Cloudflare Worker cron → `workflow_dispatch` |
 | **Log** | `data/commute_YYYY-MM.csv`, committed by the workflow |
-| **Report** | `report.md` + `report.html`, rebuilt after each window |
+| **Report** | `report.md` + `report.html`, rebuilt on every sample |
 
 ## Why the API and not google.com/maps
 

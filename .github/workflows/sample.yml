@@ -44,7 +44,7 @@ jobs:
             ${{ inputs.force && '--force' || '' }} \
             ${{ inputs.mock && '--mock' || '' }}
 
-      - name: Commit the log
+      - name: Commit the log and the report
         run: |
           set -euo pipefail
           if [ -z "$(git status --porcelain data)" ]; then
@@ -62,7 +62,13 @@ jobs:
           git config merge.union.driver 'git merge-file --union -- %A %O %B'
           echo "data/*.csv merge=union" >> .git/info/attributes
 
-          git add data
+          # Rebuild the report from the rows we just wrote, and ship both in one
+          # commit. Because the report is built after the merge on every retry,
+          # it always describes exactly the CSVs it is committed with -- the
+          # report can no longer lag the data or disagree with it.
+          python3 scripts/analyze.py
+
+          git add data report.md report.html
           git commit --quiet -m "log: $(date -u +'%Y-%m-%dT%H:%MZ') sample"
 
           for attempt in 1 2 3 4 5; do
@@ -78,6 +84,11 @@ jobs:
               git merge --abort || true
               exit 1
             fi
+            # The merge brought in other runs' rows; rebuild so the report
+            # matches the merged data, then amend it into this commit.
+            python3 scripts/analyze.py
+            git add report.md report.html
+            git commit --quiet --amend --no-edit
             sleep $((attempt * 3))
           done
 

@@ -36,6 +36,12 @@ from config import (
 WEEKDAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday",
             "Saturday", "Sunday"]
 
+# The heatmaps show every day -- the weekend rows are the baseline that makes
+# the weekday numbers legible. "Best departure windows" is a commuting
+# recommendation, though, so it ranks working days only: an empty Saturday road
+# would otherwise take the top slots and crowd out the answer you need.
+COMMUTE_DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+
 DIRECTIONS = [
     ("home_to_office", "Morning - home to office", MORNING),
     ("office_to_home", "Afternoon - office to home", AFTERNOON),
@@ -130,7 +136,8 @@ def markdown_report(rows, homes, min_samples) -> str:
                 out.append(f"| {to12(slot)} | " + " | ".join(cells) + " |")
             out.append("")
 
-    out += ["## Best departure windows", ""]
+    out += ["## Best departure windows", "",
+            "Weekdays only; the heatmaps above include weekends.", ""]
     # Ranked separately per home. A combined table just sorts by absolute
     # minutes, so the nearer home takes every row and the further home -- the
     # one whose departure time actually matters -- never appears at all.
@@ -139,7 +146,7 @@ def markdown_report(rows, homes, min_samples) -> str:
         for home in homes:
             ranked = []
             for (day, slot), values in build_grid(rows, direction, home).items():
-                if len(values) >= min_samples:
+                if day in COMMUTE_DAYS and len(values) >= min_samples:
                     ranked.append((statistics.median(values), day, slot,
                                    len(values)))
             ranked.sort()
@@ -289,13 +296,15 @@ def html_report(rows, homes, min_samples) -> str:
             parts.append("</tbody></table></div>")
 
     parts.append("<h2>Best departure windows</h2>")
+    parts.append('<p class="sub">Weekdays only; the heatmaps above '
+                 "include weekends.</p>")
     # Ranked separately per home: a combined table sorts by absolute minutes,
     # so the nearer home takes every row and the further home never appears.
     for direction, title, _ in DIRECTIONS:
         for home in homes:
             ranked = []
             for (day, slot), values in build_grid(rows, direction, home).items():
-                if len(values) >= min_samples:
+                if day in COMMUTE_DAYS and len(values) >= min_samples:
                     ranked.append((statistics.median(values), day, slot,
                                    len(values)))
             ranked.sort()

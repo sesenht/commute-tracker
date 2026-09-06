@@ -1,7 +1,7 @@
 # Commute time report
 
 - Samples: **200** across **5** days (2026-08-31 to 2026-09-05)
-- Generated 2026-09-05 9:49 PM Pacific; all times below are Pacific local.
+- Generated 2026-09-05 9:51 PM Pacific; all times below are Pacific local.
 - Cells show the **median** drive time in minutes; `-` means no sample yet.
 - Cells marked ° rest on a single sample -- one reading, not a median. Treat them as provisional until that weekday recurs.
 
@@ -95,37 +95,39 @@
 
 ## Best departure windows
 
+Weekdays only; the heatmaps above include weekends.
+
 ### Morning - home to office
 
 **home1**
 
 | Rank | Day | Depart | Median min | Samples |
 |---|---|---|---|---|
-| 1 | Saturday | 11:00 AM | 56° | 1 |
-| 2 | Wednesday | 11:00 AM | 65° | 1 |
-| 3 | Thursday | 11:00 AM | 65° | 1 |
-| 4 | Thursday | 10:45 AM | 66° | 1 |
-| 5 | Wednesday | 10:45 AM | 66° | 1 |
-| 6 | Thursday | 10:30 AM | 67° | 1 |
-| 7 | Wednesday | 10:30 AM | 67° | 1 |
-| 8 | Wednesday | 10:15 AM | 69° | 1 |
-| 9 | Thursday | 10:15 AM | 70° | 1 |
-| 10 | Thursday | 10:00 AM | 72° | 1 |
+| 1 | Wednesday | 11:00 AM | 65° | 1 |
+| 2 | Thursday | 11:00 AM | 65° | 1 |
+| 3 | Thursday | 10:45 AM | 66° | 1 |
+| 4 | Wednesday | 10:45 AM | 66° | 1 |
+| 5 | Thursday | 10:30 AM | 67° | 1 |
+| 6 | Wednesday | 10:30 AM | 67° | 1 |
+| 7 | Wednesday | 10:15 AM | 69° | 1 |
+| 8 | Thursday | 10:15 AM | 70° | 1 |
+| 9 | Thursday | 10:00 AM | 72° | 1 |
+| 10 | Wednesday | 10:00 AM | 74° | 1 |
 
 **home2**
 
 | Rank | Day | Depart | Median min | Samples |
 |---|---|---|---|---|
-| 1 | Saturday | 11:00 AM | 44° | 1 |
-| 2 | Thursday | 7:00 AM | 46° | 1 |
-| 3 | Thursday | 7:15 AM | 48° | 1 |
-| 4 | Thursday | 10:45 AM | 48° | 1 |
-| 5 | Wednesday | 7:00 AM | 48° | 1 |
-| 6 | Wednesday | 10:30 AM | 48° | 1 |
-| 7 | Thursday | 10:30 AM | 48° | 1 |
-| 8 | Wednesday | 10:45 AM | 49° | 1 |
-| 9 | Thursday | 10:00 AM | 49° | 1 |
-| 10 | Thursday | 11:00 AM | 49° | 1 |
+| 1 | Thursday | 7:00 AM | 46° | 1 |
+| 2 | Thursday | 7:15 AM | 48° | 1 |
+| 3 | Thursday | 10:45 AM | 48° | 1 |
+| 4 | Wednesday | 7:00 AM | 48° | 1 |
+| 5 | Wednesday | 10:30 AM | 48° | 1 |
+| 6 | Thursday | 10:30 AM | 48° | 1 |
+| 7 | Wednesday | 10:45 AM | 49° | 1 |
+| 8 | Thursday | 10:00 AM | 49° | 1 |
+| 9 | Thursday | 11:00 AM | 49° | 1 |
+| 10 | Wednesday | 10:15 AM | 49° | 1 |
 
 ### Afternoon - office to home
 
@@ -133,31 +135,31 @@
 
 | Rank | Day | Depart | Median min | Samples |
 |---|---|---|---|---|
-| 1 | Saturday | 3:00 PM | 58° | 1 |
-| 2 | Saturday | 2:45 PM | 59° | 1 |
-| 3 | Saturday | 2:30 PM | 59° | 1 |
-| 4 | Saturday | 2:00 PM | 60° | 1 |
-| 5 | Saturday | 3:30 PM | 60° | 1 |
-| 6 | Saturday | 2:15 PM | 60° | 1 |
-| 7 | Saturday | 3:15 PM | 60° | 1 |
-| 8 | Saturday | 4:15 PM | 60° | 1 |
-| 9 | Saturday | 4:30 PM | 60° | 1 |
-| 10 | Saturday | 4:00 PM | 60° | 1 |
+| 1 | Tuesday | 2:00 PM | 71° | 1 |
+| 2 | Thursday | 2:00 PM | 73° | 1 |
+| 3 | Tuesday | 2:15 PM | 73° | 1 |
+| 4 | Wednesday | 2:00 PM | 75° | 1 |
+| 5 | Wednesday | 2:15 PM | 75° | 1 |
+| 6 | Tuesday | 2:30 PM | 76° | 1 |
+| 7 | Monday | 3:00 PM | 76° | 1 |
+| 8 | Monday | 5:30 PM | 76° | 1 |
+| 9 | Tuesday | 2:45 PM | 79° | 1 |
+| 10 | Thursday | 2:15 PM | 79° | 1 |
 
 **home2**
 
 | Rank | Day | Depart | Median min | Samples |
 |---|---|---|---|---|
-| 1 | Saturday | 4:45 PM | 46° | 1 |
-| 2 | Saturday | 5:00 PM | 46° | 1 |
-| 3 | Saturday | 5:30 PM | 46° | 1 |
-| 4 | Saturday | 5:15 PM | 46° | 1 |
-| 5 | Saturday | 3:45 PM | 47° | 1 |
-| 6 | Saturday | 4:15 PM | 47° | 1 |
-| 7 | Saturday | 4:00 PM | 47° | 1 |
-| 8 | Saturday | 4:30 PM | 47° | 1 |
-| 9 | Saturday | 2:30 PM | 47° | 1 |
-| 10 | Saturday | 2:45 PM | 47° | 1 |
+| 1 | Tuesday | 2:15 PM | 49° | 1 |
+| 2 | Wednesday | 2:00 PM | 49° | 1 |
+| 3 | Tuesday | 2:00 PM | 49° | 1 |
+| 4 | Tuesday | 2:30 PM | 49° | 1 |
+| 5 | Thursday | 2:00 PM | 49° | 1 |
+| 6 | Thursday | 2:15 PM | 50° | 1 |
+| 7 | Wednesday | 2:15 PM | 50° | 1 |
+| 8 | Thursday | 2:30 PM | 50° | 1 |
+| 9 | Tuesday | 2:45 PM | 50° | 1 |
+| 10 | Thursday | 2:45 PM | 50° | 1 |
 
 ## Home vs home
 

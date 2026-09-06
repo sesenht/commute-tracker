@@ -1,7 +1,7 @@
 # Commute time report
 
-- Samples: **180** across **5** days (2026-08-31 to 2026-09-05)
-- Generated 2026-09-05 3:14 PM Pacific; all times below are Pacific local.
+- Samples: **200** across **5** days (2026-08-31 to 2026-09-05)
+- Generated 2026-09-05 9:43 PM Pacific; all times below are Pacific local.
 - Cells show the **median** drive time in minutes; `-` means no sample yet.
 - Cells marked ° rest on a single sample -- one reading, not a median. Treat them as provisional until that weekday recurs.
 
@@ -62,16 +62,16 @@
 | 2:30 PM | - | 76° | 80° | 82° | - | 59° | - |
 | 2:45 PM | - | 79° | 83° | 86° | - | 59° | - |
 | 3:00 PM | 76° | 81° | 84° | 92° | - | 58° | - |
-| 3:15 PM | - | 87° | 90° | 96° | - | - | - |
-| 3:30 PM | - | 90° | 91° | 96° | - | - | - |
-| 3:45 PM | - | 95° | 95° | 97° | - | - | - |
-| 4:00 PM | - | 97° | 93° | 97° | - | - | - |
-| 4:15 PM | - | 97° | 95° | 102° | - | - | - |
-| 4:30 PM | - | 95° | 95° | 99° | - | - | - |
-| 4:45 PM | - | 92° | 91° | 97° | - | - | - |
-| 5:00 PM | 83 | 92° | 90° | 95° | - | - | - |
-| 5:15 PM | 81° | 90° | 91° | 94° | - | - | - |
-| 5:30 PM | 76° | 87° | 87° | 92° | - | - | - |
+| 3:15 PM | - | 87° | 90° | 96° | - | 60° | - |
+| 3:30 PM | - | 90° | 91° | 96° | - | 60° | - |
+| 3:45 PM | - | 95° | 95° | 97° | - | 62° | - |
+| 4:00 PM | - | 97° | 93° | 97° | - | 60° | - |
+| 4:15 PM | - | 97° | 95° | 102° | - | 60° | - |
+| 4:30 PM | - | 95° | 95° | 99° | - | 60° | - |
+| 4:45 PM | - | 92° | 91° | 97° | - | 62° | - |
+| 5:00 PM | 83 | 92° | 90° | 95° | - | 61° | - |
+| 5:15 PM | 81° | 90° | 91° | 94° | - | 62° | - |
+| 5:30 PM | 76° | 87° | 87° | 92° | - | 62° | - |
 
 ### home2
 
@@ -82,16 +82,16 @@
 | 2:30 PM | - | 49° | 51° | 50° | - | 47° | - |
 | 2:45 PM | - | 50° | 52° | 50° | - | 47° | - |
 | 3:00 PM | 52° | 52° | 52° | 54° | - | 47° | - |
-| 3:15 PM | - | 55° | 53° | 54° | - | - | - |
-| 3:30 PM | - | 62° | 56° | 57° | - | - | - |
-| 3:45 PM | - | 65° | 58° | 60° | - | - | - |
-| 4:00 PM | - | 67° | 61° | 61° | - | - | - |
-| 4:15 PM | - | 69° | 65° | 62° | - | - | - |
-| 4:30 PM | - | 68° | 66° | 66° | - | - | - |
-| 4:45 PM | - | 68° | 68° | 68° | - | - | - |
-| 5:00 PM | 54 | 68° | 68° | 69° | - | - | - |
-| 5:15 PM | 53° | 68° | 67° | 67° | - | - | - |
-| 5:30 PM | 53° | 61° | 64° | 65° | - | - | - |
+| 3:15 PM | - | 55° | 53° | 54° | - | 47° | - |
+| 3:30 PM | - | 62° | 56° | 57° | - | 47° | - |
+| 3:45 PM | - | 65° | 58° | 60° | - | 47° | - |
+| 4:00 PM | - | 67° | 61° | 61° | - | 47° | - |
+| 4:15 PM | - | 69° | 65° | 62° | - | 47° | - |
+| 4:30 PM | - | 68° | 66° | 66° | - | 47° | - |
+| 4:45 PM | - | 68° | 68° | 68° | - | 46° | - |
+| 5:00 PM | 54 | 68° | 68° | 69° | - | 46° | - |
+| 5:15 PM | 53° | 68° | 67° | 67° | - | 46° | - |
+| 5:30 PM | 53° | 61° | 64° | 65° | - | 46° | - |
 
 ## Best departure windows
 
@@ -137,27 +137,27 @@
 | 2 | Saturday | 2:45 PM | 59° | 1 |
 | 3 | Saturday | 2:30 PM | 59° | 1 |
 | 4 | Saturday | 2:00 PM | 60° | 1 |
-| 5 | Saturday | 2:15 PM | 60° | 1 |
-| 6 | Tuesday | 2:00 PM | 71° | 1 |
-| 7 | Thursday | 2:00 PM | 73° | 1 |
-| 8 | Tuesday | 2:15 PM | 73° | 1 |
-| 9 | Wednesday | 2:00 PM | 75° | 1 |
-| 10 | Wednesday | 2:15 PM | 75° | 1 |
+| 5 | Saturday | 3:30 PM | 60° | 1 |
+| 6 | Saturday | 2:15 PM | 60° | 1 |
+| 7 | Saturday | 3:15 PM | 60° | 1 |
+| 8 | Saturday | 4:15 PM | 60° | 1 |
+| 9 | Saturday | 4:30 PM | 60° | 1 |
+| 10 | Saturday | 4:00 PM | 60° | 1 |
 
 **home2**
 
 | Rank | Day | Depart | Median min | Samples |
 |---|---|---|---|---|
-| 1 | Saturday | 2:30 PM | 47° | 1 |
-| 2 | Saturday | 2:45 PM | 47° | 1 |
-| 3 | Saturday | 3:00 PM | 47° | 1 |
-| 4 | Saturday | 2:15 PM | 48° | 1 |
-| 5 | Tuesday | 2:15 PM | 49° | 1 |
-| 6 | Wednesday | 2:00 PM | 49° | 1 |
-| 7 | Tuesday | 2:00 PM | 49° | 1 |
-| 8 | Tuesday | 2:30 PM | 49° | 1 |
-| 9 | Saturday | 2:00 PM | 49° | 1 |
-| 10 | Thursday | 2:00 PM | 49° | 1 |
+| 1 | Saturday | 4:45 PM | 46° | 1 |
+| 2 | Saturday | 5:00 PM | 46° | 1 |
+| 3 | Saturday | 5:30 PM | 46° | 1 |
+| 4 | Saturday | 5:15 PM | 46° | 1 |
+| 5 | Saturday | 3:45 PM | 47° | 1 |
+| 6 | Saturday | 4:15 PM | 47° | 1 |
+| 7 | Saturday | 4:00 PM | 47° | 1 |
+| 8 | Saturday | 4:30 PM | 47° | 1 |
+| 9 | Saturday | 2:30 PM | 47° | 1 |
+| 10 | Saturday | 2:45 PM | 47° | 1 |
 
 ## Home vs home
 
@@ -165,5 +165,5 @@
 |---|---|---|---|---|
 | Morning - home to office | home1 | 86 min | Saturday (56 min) | Wednesday (87 min) |
 | Morning - home to office | home2 | 50 min | Saturday (44 min) | Wednesday (50 min) |
-| Afternoon - office to home | home1 | 90 min | Saturday (59 min) | Thursday (95 min) |
-| Afternoon - office to home | home2 | 55 min | Saturday (47 min) | Tuesday (62 min) |
+| Afternoon - office to home | home1 | 84 min | Saturday (60 min) | Thursday (95 min) |
+| Afternoon - office to home | home2 | 53 min | Saturday (47 min) | Tuesday (62 min) |

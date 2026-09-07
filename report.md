@@ -1,7 +1,7 @@
 # Commute time report
 
-- Samples: **264** across **6** days (2026-08-31 to 2026-09-06)
-- Generated 2026-09-06 5:30 PM Pacific; all times below are Pacific local.
+- Samples: **266** across **7** days (2026-08-31 to 2026-09-07)
+- Generated 2026-09-07 7:00 AM Pacific; all times below are Pacific local.
 - Cells show the **median** drive time in minutes; `-` means no sample yet.
 - Cells marked ° rest on a single sample -- one reading, not a median. Treat them as provisional until that weekday recurs.
 
@@ -11,7 +11,7 @@
 
 | Time | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday |
 |---|---|---|---|---|---|---|---|
-| 7:00 AM | - | - | 87° | 85° | - | - | 44° |
+| 7:00 AM | 45° | - | 87° | 85° | - | - | 44° |
 | 7:15 AM | - | - | 90° | 89° | - | - | 44° |
 | 7:30 AM | - | - | 93° | 91° | - | - | 44° |
 | 7:45 AM | - | - | 92° | 90° | - | - | 44° |
@@ -33,7 +33,7 @@
 
 | Time | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday |
 |---|---|---|---|---|---|---|---|
-| 7:00 AM | - | - | 48° | 46° | - | - | 38° |
+| 7:00 AM | 39° | - | 48° | 46° | - | - | 38° |
 | 7:15 AM | - | - | 55° | 48° | - | - | 39° |
 | 7:30 AM | - | - | 50° | 50° | - | - | 39° |
 | 7:45 AM | - | - | 55° | 57° | - | - | 39° |
@@ -103,31 +103,31 @@ Weekdays only; the heatmaps above include weekends.
 
 | Rank | Day | Depart | Median min | Samples |
 |---|---|---|---|---|
-| 1 | Wednesday | 11:00 AM | 65° | 1 |
-| 2 | Thursday | 11:00 AM | 65° | 1 |
-| 3 | Thursday | 10:45 AM | 66° | 1 |
-| 4 | Wednesday | 10:45 AM | 66° | 1 |
-| 5 | Thursday | 10:30 AM | 67° | 1 |
-| 6 | Wednesday | 10:30 AM | 67° | 1 |
-| 7 | Wednesday | 10:15 AM | 69° | 1 |
-| 8 | Thursday | 10:15 AM | 70° | 1 |
-| 9 | Thursday | 10:00 AM | 72° | 1 |
-| 10 | Wednesday | 10:00 AM | 74° | 1 |
+| 1 | Monday | 7:00 AM | 45° | 1 |
+| 2 | Wednesday | 11:00 AM | 65° | 1 |
+| 3 | Thursday | 11:00 AM | 65° | 1 |
+| 4 | Thursday | 10:45 AM | 66° | 1 |
+| 5 | Wednesday | 10:45 AM | 66° | 1 |
+| 6 | Thursday | 10:30 AM | 67° | 1 |
+| 7 | Wednesday | 10:30 AM | 67° | 1 |
+| 8 | Wednesday | 10:15 AM | 69° | 1 |
+| 9 | Thursday | 10:15 AM | 70° | 1 |
+| 10 | Thursday | 10:00 AM | 72° | 1 |
 
 **home2**
 
 | Rank | Day | Depart | Median min | Samples |
 |---|---|---|---|---|
-| 1 | Thursday | 7:00 AM | 46° | 1 |
-| 2 | Thursday | 7:15 AM | 48° | 1 |
-| 3 | Thursday | 10:45 AM | 48° | 1 |
-| 4 | Wednesday | 7:00 AM | 48° | 1 |
-| 5 | Wednesday | 10:30 AM | 48° | 1 |
-| 6 | Thursday | 10:30 AM | 48° | 1 |
-| 7 | Wednesday | 10:45 AM | 49° | 1 |
-| 8 | Thursday | 10:00 AM | 49° | 1 |
-| 9 | Thursday | 11:00 AM | 49° | 1 |
-| 10 | Wednesday | 10:15 AM | 49° | 1 |
+| 1 | Monday | 7:00 AM | 39° | 1 |
+| 2 | Thursday | 7:00 AM | 46° | 1 |
+| 3 | Thursday | 7:15 AM | 48° | 1 |
+| 4 | Thursday | 10:45 AM | 48° | 1 |
+| 5 | Wednesday | 7:00 AM | 48° | 1 |
+| 6 | Wednesday | 10:30 AM | 48° | 1 |
+| 7 | Thursday | 10:30 AM | 48° | 1 |
+| 8 | Wednesday | 10:45 AM | 49° | 1 |
+| 9 | Thursday | 10:00 AM | 49° | 1 |
+| 10 | Thursday | 11:00 AM | 49° | 1 |
 
 ### Afternoon - office to home
 
@@ -165,7 +165,7 @@ Weekdays only; the heatmaps above include weekends.
 
 | Direction | Home | Overall median | Best day | Worst day |
 |---|---|---|---|---|
-| Morning - home to office | home1 | 71 min | Sunday (45 min) | Wednesday (87 min) |
-| Morning - home to office | home2 | 49 min | Sunday (40 min) | Wednesday (50 min) |
+| Morning - home to office | home1 | 70 min | Monday (45 min) | Wednesday (87 min) |
+| Morning - home to office | home2 | 49 min | Monday (39 min) | Wednesday (50 min) |
 | Afternoon - office to home | home1 | 80 min | Sunday (51 min) | Thursday (95 min) |
 | Afternoon - office to home | home2 | 51 min | Sunday (45 min) | Tuesday (62 min) |

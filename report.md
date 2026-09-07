@@ -1,7 +1,7 @@
 # Commute time report
 
-- Samples: **302** across **7** days (2026-08-31 to 2026-09-07)
-- Generated 2026-09-07 2:15 PM Pacific; all times below are Pacific local.
+- Samples: **304** across **7** days (2026-08-31 to 2026-09-07)
+- Generated 2026-09-07 2:30 PM Pacific; all times below are Pacific local.
 - Cells show the **median** drive time in minutes; `-` means no sample yet.
 - Cells marked ° rest on a single sample -- one reading, not a median. Treat them as provisional until that weekday recurs.
 
@@ -59,7 +59,7 @@
 |---|---|---|---|---|---|---|---|
 | 2:00 PM | 50° | 71° | 75° | 73° | - | 60° | 51° |
 | 2:15 PM | 50° | 73° | 75° | 79° | - | 60° | 51° |
-| 2:30 PM | - | 76° | 80° | 82° | - | 59° | 51° |
+| 2:30 PM | 50° | 76° | 80° | 82° | - | 59° | 51° |
 | 2:45 PM | - | 79° | 83° | 86° | - | 59° | 52° |
 | 3:00 PM | 76° | 81° | 84° | 92° | - | 58° | 51° |
 | 3:15 PM | - | 87° | 90° | 96° | - | 60° | 52° |
@@ -79,7 +79,7 @@
 |---|---|---|---|---|---|---|---|
 | 2:00 PM | 46° | 49° | 49° | 49° | - | 49° | 46° |
 | 2:15 PM | 46° | 49° | 50° | 50° | - | 48° | 46° |
-| 2:30 PM | - | 49° | 51° | 50° | - | 47° | 46° |
+| 2:30 PM | 46° | 49° | 51° | 50° | - | 47° | 46° |
 | 2:45 PM | - | 50° | 52° | 50° | - | 47° | 46° |
 | 3:00 PM | 52° | 52° | 52° | 54° | - | 47° | 46° |
 | 3:15 PM | - | 55° | 53° | 54° | - | 47° | 45° |
@@ -135,31 +135,31 @@ Weekdays only; the heatmaps above include weekends.
 
 | Rank | Day | Depart | Median min | Samples |
 |---|---|---|---|---|
-| 1 | Monday | 2:00 PM | 50° | 1 |
-| 2 | Monday | 2:15 PM | 50° | 1 |
-| 3 | Tuesday | 2:00 PM | 71° | 1 |
-| 4 | Thursday | 2:00 PM | 73° | 1 |
-| 5 | Tuesday | 2:15 PM | 73° | 1 |
-| 6 | Wednesday | 2:00 PM | 75° | 1 |
-| 7 | Wednesday | 2:15 PM | 75° | 1 |
-| 8 | Tuesday | 2:30 PM | 76° | 1 |
-| 9 | Monday | 3:00 PM | 76° | 1 |
-| 10 | Monday | 5:30 PM | 76° | 1 |
+| 1 | Monday | 2:30 PM | 50° | 1 |
+| 2 | Monday | 2:00 PM | 50° | 1 |
+| 3 | Monday | 2:15 PM | 50° | 1 |
+| 4 | Tuesday | 2:00 PM | 71° | 1 |
+| 5 | Thursday | 2:00 PM | 73° | 1 |
+| 6 | Tuesday | 2:15 PM | 73° | 1 |
+| 7 | Wednesday | 2:00 PM | 75° | 1 |
+| 8 | Wednesday | 2:15 PM | 75° | 1 |
+| 9 | Tuesday | 2:30 PM | 76° | 1 |
+| 10 | Monday | 3:00 PM | 76° | 1 |
 
 **home2**
 
 | Rank | Day | Depart | Median min | Samples |
 |---|---|---|---|---|
 | 1 | Monday | 2:15 PM | 46° | 1 |
-| 2 | Monday | 2:00 PM | 46° | 1 |
-| 3 | Tuesday | 2:15 PM | 49° | 1 |
-| 4 | Wednesday | 2:00 PM | 49° | 1 |
-| 5 | Tuesday | 2:00 PM | 49° | 1 |
-| 6 | Tuesday | 2:30 PM | 49° | 1 |
-| 7 | Thursday | 2:00 PM | 49° | 1 |
-| 8 | Thursday | 2:15 PM | 50° | 1 |
-| 9 | Wednesday | 2:15 PM | 50° | 1 |
-| 10 | Thursday | 2:30 PM | 50° | 1 |
+| 2 | Monday | 2:30 PM | 46° | 1 |
+| 3 | Monday | 2:00 PM | 46° | 1 |
+| 4 | Tuesday | 2:15 PM | 49° | 1 |
+| 5 | Wednesday | 2:00 PM | 49° | 1 |
+| 6 | Tuesday | 2:00 PM | 49° | 1 |
+| 7 | Tuesday | 2:30 PM | 49° | 1 |
+| 8 | Thursday | 2:00 PM | 49° | 1 |
+| 9 | Thursday | 2:15 PM | 50° | 1 |
+| 10 | Wednesday | 2:15 PM | 50° | 1 |
 
 ## Home vs home
 

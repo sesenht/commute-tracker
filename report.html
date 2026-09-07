@@ -34,7 +34,7 @@ td.empty { color:var(--muted); font-weight:400; }
 <h1>Commute time report</h1>
 <p class="sub">Faded, dashed cells rest on a single sample &mdash; one reading, not a median. Provisional until that weekday recurs.</p>
 <p class="sub">All times Pacific local.</p>
-<p class="sub">308 samples over 7 days, 2026-08-31 to 2026-09-07. Median driving minutes, live traffic.</p>
+<p class="sub">310 samples over 7 days, 2026-08-31 to 2026-09-07. Median driving minutes, live traffic.</p>
 <div class="legend"><span>faster</span><span class="swatch"></span><span>slower</span></div>
 <h2>Morning - home to office</h2>
 <h3>home1</h3>
@@ -398,7 +398,7 @@ td.empty { color:var(--muted); font-weight:400; }
 <td class="cell single" style="background:rgba(99,163,100,0.85)" title="Sunday 3:00 PM &middot; n=1 &middot; single sample">51</td>
 </tr>
 <tr><td class="time">3:15 PM</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(95,161,101,0.85)" title="Monday 3:15 PM &middot; n=1 &middot; single sample">50</td>
 <td class="cell single" style="background:rgba(212,139,69,0.85)" title="Tuesday 3:15 PM &middot; n=1 &middot; single sample">87</td>
 <td class="cell single" style="background:rgba(210,130,68,0.85)" title="Wednesday 3:15 PM &middot; n=1 &middot; single sample">90</td>
 <td class="cell single" style="background:rgba(206,108,66,0.85)" title="Thursday 3:15 PM &middot; n=1 &middot; single sample">96</td>
@@ -536,7 +536,7 @@ td.empty { color:var(--muted); font-weight:400; }
 <td class="cell single" style="background:rgba(70,156,106,0.85)" title="Sunday 3:00 PM &middot; n=1 &middot; single sample">46</td>
 </tr>
 <tr><td class="time">3:15 PM</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(69,155,106,0.85)" title="Monday 3:15 PM &middot; n=1 &middot; single sample">46</td>
 <td class="cell single" style="background:rgba(120,167,95,0.85)" title="Tuesday 3:15 PM &middot; n=1 &middot; single sample">55</td>
 <td class="cell single" style="background:rgba(112,166,97,0.85)" title="Wednesday 3:15 PM &middot; n=1 &middot; single sample">53</td>
 <td class="cell single" style="background:rgba(118,167,96,0.85)" title="Thursday 3:15 PM &middot; n=1 &middot; single sample">54</td>
@@ -656,15 +656,16 @@ td.empty { color:var(--muted); font-weight:400; }
 <tr><td class="time">Monday</td><td>2:30 PM</td><td><strong>50 min</strong></td><td>1</td></tr>
 <tr><td class="time">Monday</td><td>2:00 PM</td><td><strong>50 min</strong></td><td>1</td></tr>
 <tr><td class="time">Monday</td><td>2:15 PM</td><td><strong>50 min</strong></td><td>1</td></tr>
+<tr><td class="time">Monday</td><td>3:15 PM</td><td><strong>50 min</strong></td><td>1</td></tr>
 <tr><td class="time">Monday</td><td>2:45 PM</td><td><strong>50 min</strong></td><td>1</td></tr>
 <tr><td class="time">Monday</td><td>3:00 PM</td><td><strong>63 min</strong></td><td>2</td></tr>
 <tr><td class="time">Tuesday</td><td>2:00 PM</td><td><strong>71 min</strong></td><td>1</td></tr>
 <tr><td class="time">Thursday</td><td>2:00 PM</td><td><strong>73 min</strong></td><td>1</td></tr>
 <tr><td class="time">Tuesday</td><td>2:15 PM</td><td><strong>73 min</strong></td><td>1</td></tr>
 <tr><td class="time">Wednesday</td><td>2:00 PM</td><td><strong>75 min</strong></td><td>1</td></tr>
-<tr><td class="time">Wednesday</td><td>2:15 PM</td><td><strong>75 min</strong></td><td>1</td></tr>
 </tbody></table></div>
 <div class="card"><h3>Afternoon - office to home &middot; home2</h3><table><thead><tr><th class="time">Day</th><th>Depart</th><th>Median</th><th>n</th></tr></thead><tbody>
+<tr><td class="time">Monday</td><td>3:15 PM</td><td><strong>46 min</strong></td><td>1</td></tr>
 <tr><td class="time">Monday</td><td>2:15 PM</td><td><strong>46 min</strong></td><td>1</td></tr>
 <tr><td class="time">Monday</td><td>2:30 PM</td><td><strong>46 min</strong></td><td>1</td></tr>
 <tr><td class="time">Monday</td><td>2:45 PM</td><td><strong>46 min</strong></td><td>1</td></tr>
@@ -674,6 +675,5 @@ td.empty { color:var(--muted); font-weight:400; }
 <tr><td class="time">Monday</td><td>3:00 PM</td><td><strong>49 min</strong></td><td>2</td></tr>
 <tr><td class="time">Tuesday</td><td>2:00 PM</td><td><strong>49 min</strong></td><td>1</td></tr>
 <tr><td class="time">Tuesday</td><td>2:30 PM</td><td><strong>49 min</strong></td><td>1</td></tr>
-<tr><td class="time">Thursday</td><td>2:00 PM</td><td><strong>49 min</strong></td><td>1</td></tr>
 </tbody></table></div>
 </div>

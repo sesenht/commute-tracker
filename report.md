@@ -1,7 +1,7 @@
 # Commute time report
 
-- Samples: **342** across **8** days (2026-08-31 to 2026-09-08)
-- Generated 2026-09-08 8:30 AM Pacific; all times below are Pacific local.
+- Samples: **344** across **8** days (2026-08-31 to 2026-09-08)
+- Generated 2026-09-08 8:45 AM Pacific; all times below are Pacific local.
 - Cells show the **median** drive time in minutes; `-` means no sample yet.
 - Cells marked ° rest on a single sample -- one reading, not a median. Treat them as provisional until that weekday recurs.
 
@@ -18,7 +18,7 @@
 | 8:00 AM | 45° | 101° | 91° | 90° | - | - | 44° |
 | 8:15 AM | 45° | 98° | 91° | 89° | - | - | 44° |
 | 8:30 AM | 45° | 97° | 91° | 90° | - | - | 44° |
-| 8:45 AM | 46° | - | 94° | 89° | - | - | 45° |
+| 8:45 AM | 46° | 94° | 94° | 89° | - | - | 45° |
 | 9:00 AM | 46° | - | 89° | 86° | - | - | 45° |
 | 9:15 AM | 46° | - | 86° | 82° | - | - | 46° |
 | 9:30 AM | 46° | - | 81° | 77° | - | - | 46° |
@@ -40,7 +40,7 @@
 | 8:00 AM | 40° | 66° | 60° | 59° | - | - | 39° |
 | 8:15 AM | 40° | 64° | 60° | 58° | - | - | 40° |
 | 8:30 AM | 40° | 62° | 60° | 58° | - | - | 40° |
-| 8:45 AM | 40° | - | 59° | 59° | - | - | 40° |
+| 8:45 AM | 40° | 63° | 59° | 59° | - | - | 40° |
 | 9:00 AM | 40° | - | 58° | 58° | - | - | 40° |
 | 9:15 AM | 40° | - | 51° | 53° | - | - | 40° |
 | 9:30 AM | 41° | - | 50° | 50° | - | - | 40° |
@@ -166,6 +166,6 @@ Weekdays only; the heatmaps above include weekends.
 | Direction | Home | Overall median | Best day | Worst day |
 |---|---|---|---|---|
 | Morning - home to office | home1 | 66 min | Sunday (45 min) | Tuesday (97 min) |
-| Morning - home to office | home2 | 48 min | Sunday (40 min) | Tuesday (61 min) |
+| Morning - home to office | home2 | 48 min | Sunday (40 min) | Tuesday (62 min) |
 | Afternoon - office to home | home1 | 73 min | Monday (50 min) | Thursday (95 min) |
 | Afternoon - office to home | home2 | 49 min | Sunday (45 min) | Tuesday (62 min) |

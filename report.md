@@ -1,7 +1,7 @@
 # Commute time report
 
-- Samples: **322** across **7** days (2026-08-31 to 2026-09-07)
-- Generated 2026-09-07 4:45 PM Pacific; all times below are Pacific local.
+- Samples: **324** across **7** days (2026-08-31 to 2026-09-07)
+- Generated 2026-09-07 5:00 PM Pacific; all times below are Pacific local.
 - Cells show the **median** drive time in minutes; `-` means no sample yet.
 - Cells marked ° rest on a single sample -- one reading, not a median. Treat them as provisional until that weekday recurs.
 
@@ -69,7 +69,7 @@
 | 4:15 PM | 50° | 97° | 95° | 102° | - | 60° | 50° |
 | 4:30 PM | 49° | 95° | 95° | 99° | - | 60° | 50° |
 | 4:45 PM | 49° | 92° | 91° | 97° | - | 62° | 49° |
-| 5:00 PM | 83 | 92° | 90° | 95° | - | 61° | 50° |
+| 5:00 PM | 82 | 92° | 90° | 95° | - | 61° | 50° |
 | 5:15 PM | 81° | 90° | 91° | 94° | - | 62° | 49° |
 | 5:30 PM | 76° | 87° | 87° | 92° | - | 62° | 50° |
 

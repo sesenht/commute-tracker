@@ -1,7 +1,7 @@
 # Commute time report
 
-- Samples: **566** across **12** days (2026-08-31 to 2026-09-12)
-- Generated 2026-09-12 7:16 AM Pacific; all times below are Pacific local.
+- Samples: **568** across **12** days (2026-08-31 to 2026-09-12)
+- Generated 2026-09-12 7:31 AM Pacific; all times below are Pacific local.
 - Cells show the **median** drive time in minutes; `-` means no sample yet.
 - Cells marked ° rest on a single sample -- one reading, not a median. Treat them as provisional until that weekday recurs.
 
@@ -13,7 +13,7 @@
 |---|---|---|---|---|---|---|---|
 | 7:00 AM | 45° | 90° | 88 | 85 | 69° | 46° | 44° |
 | 7:15 AM | 45° | 94° | 92 | 90 | 69° | 46° | 44° |
-| 7:30 AM | 45° | 97° | 94 | 91 | 68° | - | 44° |
+| 7:30 AM | 45° | 97° | 94 | 91 | 68° | 46° | 44° |
 | 7:45 AM | 45° | 99° | 92° | 88 | 70° | - | 44° |
 | 8:00 AM | 45° | 101° | 91° | 92 | 70° | - | 44° |
 | 8:15 AM | 45° | 98° | 93 | 90 | 71° | - | 44° |
@@ -35,7 +35,7 @@
 |---|---|---|---|---|---|---|---|
 | 7:00 AM | 39° | 47° | 47 | 46 | 44° | 40° | 38° |
 | 7:15 AM | 39° | 48° | 52 | 48 | 45° | 40° | 39° |
-| 7:30 AM | 39° | 52° | 51 | 51 | 46° | - | 39° |
+| 7:30 AM | 39° | 52° | 51 | 51 | 46° | 40° | 39° |
 | 7:45 AM | 39° | 61° | 55° | 60 | 48° | - | 39° |
 | 8:00 AM | 40° | 66° | 60° | 60 | 50° | - | 39° |
 | 8:15 AM | 40° | 64° | 60 | 60 | 50° | - | 40° |

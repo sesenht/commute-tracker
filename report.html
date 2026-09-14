@@ -34,7 +34,7 @@ td.empty { color:var(--muted); font-weight:400; }
 <h1>Commute time report</h1>
 <p class="sub">Faded, dashed cells rest on a single sample &mdash; one reading, not a median. Provisional until that weekday recurs.</p>
 <p class="sub">All times Pacific local.</p>
-<p class="sub">658 samples over 13 days, 2026-08-31 to 2026-09-14. Median driving minutes, live traffic.</p>
+<p class="sub">660 samples over 13 days, 2026-08-31 to 2026-09-14. Median driving minutes, live traffic.</p>
 <div class="legend"><span>faster</span><span class="swatch"></span><span>slower</span></div>
 <h2>Morning - home to office</h2>
 <h3>home1</h3>
@@ -184,7 +184,7 @@ td.empty { color:var(--muted); font-weight:400; }
 <td class="cell" style="background:rgba(119,167,96,0.85)" title="Sunday 10:45 AM &middot; n=2">49</td>
 </tr>
 <tr><td class="time">11:00 AM</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(173,180,84,0.85)" title="Monday 11:00 AM &middot; n=1 &middot; single sample">60</td>
 <td class="cell single" style="background:rgba(206,188,78,0.85)" title="Tuesday 11:00 AM &middot; n=1 &middot; single sample">66</td>
 <td class="cell" style="background:rgba(197,186,80,0.85)" title="Wednesday 11:00 AM &middot; n=2">65</td>
 <td class="cell" style="background:rgba(206,188,78,0.85)" title="Thursday 11:00 AM &middot; n=2">66</td>
@@ -340,7 +340,7 @@ td.empty { color:var(--muted); font-weight:400; }
 <td class="cell" style="background:rgba(78,157,104,0.85)" title="Sunday 10:45 AM &middot; n=2">41</td>
 </tr>
 <tr><td class="time">11:00 AM</td>
-<td class="empty">&ndash;</td>
+<td class="cell single" style="background:rgba(98,162,100,0.85)" title="Monday 11:00 AM &middot; n=1 &middot; single sample">45</td>
 <td class="cell single" style="background:rgba(107,164,98,0.85)" title="Tuesday 11:00 AM &middot; n=1 &middot; single sample">47</td>
 <td class="cell" style="background:rgba(115,166,96,0.85)" title="Wednesday 11:00 AM &middot; n=2">49</td>
 <td class="cell" style="background:rgba(112,166,97,0.85)" title="Thursday 11:00 AM &middot; n=2">48</td>
@@ -630,6 +630,7 @@ td.empty { color:var(--muted); font-weight:400; }
 <p class="sub">Weekdays only; the heatmaps above include weekends.</p>
 <div class="card"><h3>Morning - home to office &middot; home1</h3><table><thead><tr><th class="time">Day</th><th>Depart</th><th>Median</th><th>n</th></tr></thead><tbody>
 <tr><td class="time">Monday</td><td>10:45 AM</td><td><strong>59 min</strong></td><td>1</td></tr>
+<tr><td class="time">Monday</td><td>11:00 AM</td><td><strong>60 min</strong></td><td>1</td></tr>
 <tr><td class="time">Monday</td><td>10:30 AM</td><td><strong>61 min</strong></td><td>1</td></tr>
 <tr><td class="time">Friday</td><td>11:00 AM</td><td><strong>61 min</strong></td><td>1</td></tr>
 <tr><td class="time">Monday</td><td>10:15 AM</td><td><strong>61 min</strong></td><td>1</td></tr>
@@ -638,11 +639,11 @@ td.empty { color:var(--muted); font-weight:400; }
 <tr><td class="time">Friday</td><td>10:30 AM</td><td><strong>62 min</strong></td><td>1</td></tr>
 <tr><td class="time">Friday</td><td>10:15 AM</td><td><strong>62 min</strong></td><td>1</td></tr>
 <tr><td class="time">Monday</td><td>10:00 AM</td><td><strong>62 min</strong></td><td>1</td></tr>
-<tr><td class="time">Friday</td><td>9:30 AM</td><td><strong>63 min</strong></td><td>1</td></tr>
 </tbody></table></div>
 <div class="card"><h3>Morning - home to office &middot; home2</h3><table><thead><tr><th class="time">Day</th><th>Depart</th><th>Median</th><th>n</th></tr></thead><tbody>
 <tr><td class="time">Friday</td><td>7:00 AM</td><td><strong>44 min</strong></td><td>1</td></tr>
 <tr><td class="time">Friday</td><td>7:15 AM</td><td><strong>45 min</strong></td><td>1</td></tr>
+<tr><td class="time">Monday</td><td>11:00 AM</td><td><strong>45 min</strong></td><td>1</td></tr>
 <tr><td class="time">Monday</td><td>10:45 AM</td><td><strong>45 min</strong></td><td>1</td></tr>
 <tr><td class="time">Monday</td><td>10:30 AM</td><td><strong>46 min</strong></td><td>1</td></tr>
 <tr><td class="time">Friday</td><td>10:30 AM</td><td><strong>46 min</strong></td><td>1</td></tr>
@@ -650,7 +651,6 @@ td.empty { color:var(--muted); font-weight:400; }
 <tr><td class="time">Friday</td><td>10:15 AM</td><td><strong>46 min</strong></td><td>1</td></tr>
 <tr><td class="time">Friday</td><td>10:00 AM</td><td><strong>46 min</strong></td><td>1</td></tr>
 <tr><td class="time">Friday</td><td>11:00 AM</td><td><strong>46 min</strong></td><td>1</td></tr>
-<tr><td class="time">Monday</td><td>10:15 AM</td><td><strong>46 min</strong></td><td>1</td></tr>
 </tbody></table></div>
 <div class="card"><h3>Afternoon - office to home &middot; home1</h3><table><thead><tr><th class="time">Day</th><th>Depart</th><th>Median</th><th>n</th></tr></thead><tbody>
 <tr><td class="time">Tuesday</td><td>2:00 PM</td><td><strong>71 min</strong></td><td>1</td></tr>

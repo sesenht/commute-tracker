@@ -1,7 +1,7 @@
 # Commute time report
 
-- Samples: **664** across **13** days (2026-08-31 to 2026-09-14)
-- Generated 2026-09-14 2:16 PM Pacific; all times below are Pacific local.
+- Samples: **666** across **13** days (2026-08-31 to 2026-09-14)
+- Generated 2026-09-14 2:31 PM Pacific; all times below are Pacific local.
 - Cells show the **median** drive time in minutes; `-` means no sample yet.
 - Cells marked ° rest on a single sample -- one reading, not a median. Treat them as provisional until that weekday recurs.
 
@@ -59,7 +59,7 @@
 |---|---|---|---|---|---|---|---|
 | 2:00 PM | 67° | 71° | 73 | 73° | 78° | 61 | 52 |
 | 2:15 PM | 70° | 73° | 75 | 79° | 82° | 61 | 52 |
-| 2:30 PM | - | 76° | 80 | 82 | 85° | 61 | 52 |
+| 2:30 PM | 73° | 76° | 80 | 82 | 85° | 61 | 52 |
 | 2:45 PM | - | 79° | 85 | 87 | 87° | 60 | 53 |
 | 3:00 PM | 76° | 83 | 87 | 91 | 90° | 59 | 52 |
 | 3:15 PM | - | 88 | 90 | 95 | 90° | 60 | 52 |
@@ -79,7 +79,7 @@
 |---|---|---|---|---|---|---|---|
 | 2:00 PM | 50° | 49° | 49 | 49° | 51° | 49 | 47 |
 | 2:15 PM | 51° | 49° | 50 | 50° | 51° | 48 | 46 |
-| 2:30 PM | - | 49° | 51 | 51 | 51° | 48 | 46 |
+| 2:30 PM | 50° | 49° | 51 | 51 | 51° | 48 | 46 |
 | 2:45 PM | - | 50° | 52 | 51 | 52° | 48 | 46 |
 | 3:00 PM | 52° | 52 | 53 | 53 | 52° | 48 | 46 |
 | 3:15 PM | - | 54 | 53 | 54 | 52° | 48 | 46 |
@@ -138,13 +138,13 @@ Weekdays only; the heatmaps above include weekends.
 | 1 | Monday | 2:00 PM | 67° | 1 |
 | 2 | Monday | 2:15 PM | 70° | 1 |
 | 3 | Tuesday | 2:00 PM | 71° | 1 |
-| 4 | Thursday | 2:00 PM | 73° | 1 |
-| 5 | Tuesday | 2:15 PM | 73° | 1 |
-| 6 | Wednesday | 2:00 PM | 73 | 2 |
-| 7 | Wednesday | 2:15 PM | 75 | 2 |
-| 8 | Tuesday | 2:30 PM | 76° | 1 |
-| 9 | Monday | 3:00 PM | 76° | 1 |
-| 10 | Monday | 5:30 PM | 76° | 1 |
+| 4 | Monday | 2:30 PM | 73° | 1 |
+| 5 | Thursday | 2:00 PM | 73° | 1 |
+| 6 | Tuesday | 2:15 PM | 73° | 1 |
+| 7 | Wednesday | 2:00 PM | 73 | 2 |
+| 8 | Wednesday | 2:15 PM | 75 | 2 |
+| 9 | Tuesday | 2:30 PM | 76° | 1 |
+| 10 | Monday | 3:00 PM | 76° | 1 |
 
 **home2**
 
@@ -159,7 +159,7 @@ Weekdays only; the heatmaps above include weekends.
 | 7 | Thursday | 2:15 PM | 50° | 1 |
 | 8 | Monday | 2:00 PM | 50° | 1 |
 | 9 | Tuesday | 2:45 PM | 50° | 1 |
-| 10 | Thursday | 2:30 PM | 51 | 2 |
+| 10 | Monday | 2:30 PM | 50° | 1 |
 
 ## Home vs home
 

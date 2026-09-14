@@ -1,7 +1,7 @@
 # Commute time report
 
-- Samples: **648** across **13** days (2026-08-31 to 2026-09-14)
-- Generated 2026-09-14 9:31 AM Pacific; all times below are Pacific local.
+- Samples: **650** across **13** days (2026-08-31 to 2026-09-14)
+- Generated 2026-09-14 9:46 AM Pacific; all times below are Pacific local.
 - Cells show the **median** drive time in minutes; `-` means no sample yet.
 - Cells marked ° rest on a single sample -- one reading, not a median. Treat them as provisional until that weekday recurs.
 
@@ -22,7 +22,7 @@
 | 9:00 AM | 76° | 90° | 90 | 89 | 70° | 47° | 45 |
 | 9:15 AM | 72° | 84° | 86 | 83 | 65° | 48° | 46 |
 | 9:30 AM | 67° | 80° | 82 | 77 | 63° | 49° | 46 |
-| 9:45 AM | - | 76° | 79 | 75° | 63° | 50° | 47 |
+| 9:45 AM | 64° | 76° | 79 | 75° | 63° | 50° | 47 |
 | 10:00 AM | - | 77° | 75 | 72° | 62° | 51° | 48 |
 | 10:15 AM | - | 73° | 70 | 70° | 62° | 51° | 48 |
 | 10:30 AM | - | 70° | 68 | 69 | 62° | 53° | 49 |
@@ -44,7 +44,7 @@
 | 9:00 AM | 54° | 62° | 59 | 59 | 50° | 41° | 40 |
 | 9:15 AM | 51° | 56° | 54 | 54 | 49° | 41° | 40 |
 | 9:30 AM | 49° | 52° | 51 | 50 | 48° | 41° | 40 |
-| 9:45 AM | - | 49° | 50 | 49° | 46° | 42° | 41 |
+| 9:45 AM | 48° | 49° | 50 | 49° | 46° | 42° | 41 |
 | 10:00 AM | - | 49° | 49 | 49° | 46° | 42° | 41 |
 | 10:15 AM | - | 49° | 49 | 49° | 46° | 42° | 41 |
 | 10:30 AM | - | 48° | 48 | 49 | 46° | 43° | 41 |
@@ -110,9 +110,9 @@ Weekdays only; the heatmaps above include weekends.
 | 5 | Friday | 10:15 AM | 62° | 1 |
 | 6 | Friday | 9:30 AM | 63° | 1 |
 | 7 | Friday | 9:45 AM | 63° | 1 |
-| 8 | Wednesday | 11:00 AM | 65 | 2 |
-| 9 | Friday | 9:15 AM | 65° | 1 |
-| 10 | Wednesday | 10:45 AM | 66 | 2 |
+| 8 | Monday | 9:45 AM | 64° | 1 |
+| 9 | Wednesday | 11:00 AM | 65 | 2 |
+| 10 | Friday | 9:15 AM | 65° | 1 |
 
 **home2**
 
@@ -166,6 +166,6 @@ Weekdays only; the heatmaps above include weekends.
 | Direction | Home | Overall median | Best day | Worst day |
 |---|---|---|---|---|
 | Morning - home to office | home1 | 70 min | Sunday (45 min) | Tuesday (90 min) |
-| Morning - home to office | home2 | 48 min | Sunday (40 min) | Monday (54 min) |
+| Morning - home to office | home2 | 48 min | Sunday (40 min) | Monday (52 min) |
 | Afternoon - office to home | home1 | 83 min | Sunday (51 min) | Thursday (94 min) |
 | Afternoon - office to home | home2 | 52 min | Sunday (45 min) | Tuesday (63 min) |

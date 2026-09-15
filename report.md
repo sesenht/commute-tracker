@@ -1,7 +1,7 @@
 # Commute time report
 
-- Samples: **704** across **14** days (2026-08-31 to 2026-09-15)
-- Generated 2026-09-15 8:31 AM Pacific; all times below are Pacific local.
+- Samples: **706** across **14** days (2026-08-31 to 2026-09-15)
+- Generated 2026-09-15 8:46 AM Pacific; all times below are Pacific local.
 - Cells show the **median** drive time in minutes; `-` means no sample yet.
 - Cells marked ° rest on a single sample -- one reading, not a median. Treat them as provisional until that weekday recurs.
 
@@ -18,7 +18,7 @@
 | 8:00 AM | 89° | 101 | 91° | 92 | 70° | 47° | 44 |
 | 8:15 AM | 87° | 99 | 93 | 90 | 71° | 46° | 44 |
 | 8:30 AM | 82° | 97 | 94 | 93 | 70° | 46° | 45 |
-| 8:45 AM | 82° | 94° | 95 | 92 | 70° | 47° | 45 |
+| 8:45 AM | 82° | 93 | 95 | 92 | 70° | 47° | 45 |
 | 9:00 AM | 76° | 90° | 90 | 89 | 70° | 47° | 45 |
 | 9:15 AM | 72° | 84° | 86 | 83 | 65° | 48° | 46 |
 | 9:30 AM | 67° | 80° | 82 | 77 | 63° | 49° | 46 |
@@ -40,7 +40,7 @@
 | 8:00 AM | 56° | 67 | 60° | 60 | 50° | 42° | 39 |
 | 8:15 AM | 56° | 65 | 60 | 60 | 50° | 41° | 40 |
 | 8:30 AM | 56° | 65 | 61 | 60 | 50° | 41° | 40 |
-| 8:45 AM | 54° | 63° | 60 | 60 | 50° | 41° | 40 |
+| 8:45 AM | 54° | 64 | 60 | 60 | 50° | 41° | 40 |
 | 9:00 AM | 54° | 62° | 59 | 59 | 50° | 41° | 40 |
 | 9:15 AM | 51° | 56° | 54 | 54 | 49° | 41° | 40 |
 | 9:30 AM | 49° | 52° | 51 | 50 | 48° | 41° | 40 |
@@ -165,7 +165,7 @@ Weekdays only; the heatmaps above include weekends.
 
 | Direction | Home | Overall median | Best day | Worst day |
 |---|---|---|---|---|
-| Morning - home to office | home1 | 70 min | Sunday (45 min) | Tuesday (96 min) |
-| Morning - home to office | home2 | 48 min | Sunday (40 min) | Tuesday (53 min) |
+| Morning - home to office | home1 | 70 min | Sunday (45 min) | Tuesday (94 min) |
+| Morning - home to office | home2 | 48 min | Sunday (40 min) | Tuesday (54 min) |
 | Afternoon - office to home | home1 | 82 min | Sunday (51 min) | Thursday (94 min) |
 | Afternoon - office to home | home2 | 52 min | Sunday (45 min) | Tuesday (63 min) |

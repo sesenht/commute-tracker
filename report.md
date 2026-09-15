@@ -1,7 +1,7 @@
 # Commute time report
 
-- Samples: **724** across **14** days (2026-08-31 to 2026-09-15)
-- Generated 2026-09-15 11:01 AM Pacific; all times below are Pacific local.
+- Samples: **726** across **14** days (2026-08-31 to 2026-09-15)
+- Generated 2026-09-15 2:02 PM Pacific; all times below are Pacific local.
 - Cells show the **median** drive time in minutes; `-` means no sample yet.
 - Cells marked ° rest on a single sample -- one reading, not a median. Treat them as provisional until that weekday recurs.
 
@@ -57,7 +57,7 @@
 
 | Time | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday |
 |---|---|---|---|---|---|---|---|
-| 2:00 PM | 67° | 71° | 73 | 73° | 78° | 61 | 52 |
+| 2:00 PM | 67° | 72 | 73 | 73° | 78° | 61 | 52 |
 | 2:15 PM | 70° | 73° | 75 | 79° | 82° | 61 | 52 |
 | 2:30 PM | 73° | 76° | 80 | 82 | 85° | 61 | 52 |
 | 2:45 PM | 77° | 79° | 85 | 87 | 87° | 60 | 53 |
@@ -77,7 +77,7 @@
 
 | Time | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday |
 |---|---|---|---|---|---|---|---|
-| 2:00 PM | 50° | 49° | 49 | 49° | 51° | 49 | 47 |
+| 2:00 PM | 50° | 49 | 49 | 49° | 51° | 49 | 47 |
 | 2:15 PM | 51° | 49° | 50 | 50° | 51° | 48 | 46 |
 | 2:30 PM | 50° | 49° | 51 | 51 | 51° | 48 | 46 |
 | 2:45 PM | 51° | 50° | 52 | 51 | 52° | 48 | 46 |
@@ -137,7 +137,7 @@ Weekdays only; the heatmaps above include weekends.
 |---|---|---|---|---|
 | 1 | Monday | 2:00 PM | 67° | 1 |
 | 2 | Monday | 2:15 PM | 70° | 1 |
-| 3 | Tuesday | 2:00 PM | 71° | 1 |
+| 3 | Tuesday | 2:00 PM | 72 | 2 |
 | 4 | Monday | 2:30 PM | 73° | 1 |
 | 5 | Thursday | 2:00 PM | 73° | 1 |
 | 6 | Tuesday | 2:15 PM | 73° | 1 |
@@ -150,9 +150,9 @@ Weekdays only; the heatmaps above include weekends.
 
 | Rank | Day | Depart | Median min | Samples |
 |---|---|---|---|---|
-| 1 | Tuesday | 2:15 PM | 49° | 1 |
-| 2 | Wednesday | 2:00 PM | 49 | 2 |
-| 3 | Tuesday | 2:00 PM | 49° | 1 |
+| 1 | Tuesday | 2:00 PM | 49 | 2 |
+| 2 | Tuesday | 2:15 PM | 49° | 1 |
+| 3 | Wednesday | 2:00 PM | 49 | 2 |
 | 4 | Tuesday | 2:30 PM | 49° | 1 |
 | 5 | Thursday | 2:00 PM | 49° | 1 |
 | 6 | Wednesday | 2:15 PM | 50 | 2 |
@@ -168,4 +168,4 @@ Weekdays only; the heatmaps above include weekends.
 | Morning - home to office | home1 | 70 min | Sunday (45 min) | Tuesday (89 min) |
 | Morning - home to office | home2 | 48 min | Sunday (40 min) | Tuesday (55 min) |
 | Afternoon - office to home | home1 | 82 min | Sunday (51 min) | Thursday (94 min) |
-| Afternoon - office to home | home2 | 52 min | Sunday (45 min) | Tuesday (63 min) |
+| Afternoon - office to home | home2 | 52 min | Sunday (45 min) | Tuesday (62 min) |

@@ -1,7 +1,7 @@
 # Commute time report
 
-- Samples: **978** across **18** days (2026-08-31 to 2026-09-19)
-- Generated 2026-09-19 10:30 AM Pacific; all times below are Pacific local.
+- Samples: **980** across **18** days (2026-08-31 to 2026-09-19)
+- Generated 2026-09-19 10:46 AM Pacific; all times below are Pacific local.
 - Cells show the **median** drive time in minutes; `-` means no sample yet.
 - Cells marked ° rest on a single sample -- one reading, not a median. Treat them as provisional until that weekday recurs.
 
@@ -26,7 +26,7 @@
 | 10:00 AM | 62° | 75 | 74 | 71 | 62 | 54 | 48 |
 | 10:15 AM | 61° | 72 | 71 | 68 | 62 | 54 | 48 |
 | 10:30 AM | 61° | 69 | 68 | 67 | 62 | 56 | 49 |
-| 10:45 AM | 59° | 68 | 66 | 66 | 61 | 56° | 49 |
+| 10:45 AM | 59° | 68 | 66 | 66 | 61 | 59 | 49 |
 | 11:00 AM | 60° | 67 | 65 | 65 | 61 | 57 | 52 |
 
 ### home2
@@ -48,7 +48,7 @@
 | 10:00 AM | 48° | 52 | 49 | 49 | 46 | 43 | 41 |
 | 10:15 AM | 46° | 49 | 50 | 49 | 46 | 43 | 41 |
 | 10:30 AM | 46° | 48 | 48 | 48 | 46 | 43 | 41 |
-| 10:45 AM | 45° | 48 | 49 | 48 | 46 | 43° | 41 |
+| 10:45 AM | 45° | 48 | 49 | 48 | 46 | 43 | 41 |
 | 11:00 AM | 45° | 48 | 48 | 48 | 46 | 44 | 42 |
 
 ## Afternoon - office to home

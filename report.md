@@ -1,7 +1,7 @@
 # Commute time report
 
-- Samples: **1,050** across **19** days (2026-08-31 to 2026-09-20)
-- Generated 2026-09-20 2:15 PM Pacific; all times below are Pacific local.
+- Samples: **1,052** across **19** days (2026-08-31 to 2026-09-20)
+- Generated 2026-09-20 2:30 PM Pacific; all times below are Pacific local.
 - Cells show the **median** drive time in minutes; `-` means no sample yet.
 - Cells marked ° rest on a single sample -- one reading, not a median. Treat them as provisional until that weekday recurs.
 
@@ -59,7 +59,7 @@
 |---|---|---|---|---|---|---|---|
 | 2:00 PM | 67° | 72 | 75 | 72 | 81 | 62 | 52 |
 | 2:15 PM | 70° | 77 | 75 | 79 | 85 | 62 | 52 |
-| 2:30 PM | 73° | 80 | 80 | 83 | 89 | 62 | 52 |
+| 2:30 PM | 73° | 80 | 80 | 83 | 89 | 62 | 53 |
 | 2:45 PM | 77° | 83 | 87 | 89 | 92 | 61 | 53 |
 | 3:00 PM | 78 | 85 | 89 | 92 | 93 | 60 | 52 |
 | 3:15 PM | 80° | 88 | 90 | 96 | 93 | 61 | 52 |
@@ -168,4 +168,4 @@ Weekdays only; the heatmaps above include weekends.
 | Morning - home to office | home1 | 69 min | Sunday (45 min) | Tuesday (89 min) |
 | Morning - home to office | home2 | 48 min | Sunday (40 min) | Tuesday (55 min) |
 | Afternoon - office to home | home1 | 85 min | Sunday (51 min) | Thursday (95 min) |
-| Afternoon - office to home | home2 | 52 min | Sunday (45 min) | Tuesday (62 min) |
+| Afternoon - office to home | home2 | 52 min | Sunday (46 min) | Tuesday (62 min) |

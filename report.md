@@ -1,7 +1,7 @@
 # Commute time report
 
-- Samples: **1,102** across **20** days (2026-08-31 to 2026-09-21)
-- Generated 2026-09-21 10:00 AM Pacific; all times below are Pacific local.
+- Samples: **1,104** across **20** days (2026-08-31 to 2026-09-21)
+- Generated 2026-09-21 10:15 AM Pacific; all times below are Pacific local.
 - Cells show the **median** drive time in minutes; `-` means no sample yet.
 - Cells marked ° rest on a single sample -- one reading, not a median. Treat them as provisional until that weekday recurs.
 
@@ -24,7 +24,7 @@
 | 9:30 AM | 67 | 79 | 81 | 77 | 64 | 49 | 46 |
 | 9:45 AM | 64 | 75 | 79 | 73 | 63 | 52 | 47 |
 | 10:00 AM | 62 | 75 | 74 | 71 | 62 | 54 | 48 |
-| 10:15 AM | 61° | 72 | 71 | 68 | 62 | 54 | 48 |
+| 10:15 AM | 61 | 72 | 71 | 68 | 62 | 54 | 48 |
 | 10:30 AM | 61° | 69 | 68 | 67 | 62 | 56 | 49 |
 | 10:45 AM | 59° | 68 | 66 | 66 | 61 | 59 | 50 |
 | 11:00 AM | 60° | 67 | 65 | 65 | 61 | 57 | 53 |
@@ -46,7 +46,7 @@
 | 9:30 AM | 48 | 55 | 50 | 50 | 47 | 42 | 40 |
 | 9:45 AM | 48 | 53 | 50 | 49 | 46 | 42 | 41 |
 | 10:00 AM | 47 | 52 | 49 | 49 | 46 | 43 | 41 |
-| 10:15 AM | 46° | 49 | 50 | 49 | 46 | 43 | 41 |
+| 10:15 AM | 46 | 49 | 50 | 49 | 46 | 43 | 41 |
 | 10:30 AM | 46° | 48 | 48 | 48 | 46 | 43 | 41 |
 | 10:45 AM | 45° | 48 | 49 | 48 | 46 | 43 | 41 |
 | 11:00 AM | 45° | 48 | 48 | 48 | 46 | 44 | 42 |
@@ -106,8 +106,8 @@ Weekdays only; the heatmaps above include weekends.
 | 1 | Monday | 10:45 AM | 59° | 1 |
 | 2 | Monday | 11:00 AM | 60° | 1 |
 | 3 | Monday | 10:30 AM | 61° | 1 |
-| 4 | Friday | 10:45 AM | 61 | 2 |
-| 5 | Monday | 10:15 AM | 61° | 1 |
+| 4 | Monday | 10:15 AM | 61 | 2 |
+| 5 | Friday | 10:45 AM | 61 | 2 |
 | 6 | Friday | 11:00 AM | 61 | 2 |
 | 7 | Friday | 10:00 AM | 62 | 2 |
 | 8 | Friday | 10:30 AM | 62 | 2 |
@@ -125,9 +125,9 @@ Weekdays only; the heatmaps above include weekends.
 | 5 | Monday | 10:30 AM | 46° | 1 |
 | 6 | Friday | 10:30 AM | 46 | 2 |
 | 7 | Friday | 10:15 AM | 46 | 2 |
-| 8 | Friday | 7:15 AM | 46 | 2 |
-| 9 | Friday | 11:00 AM | 46 | 2 |
-| 10 | Friday | 10:00 AM | 46 | 2 |
+| 8 | Monday | 10:15 AM | 46 | 2 |
+| 9 | Friday | 7:15 AM | 46 | 2 |
+| 10 | Friday | 11:00 AM | 46 | 2 |
 
 ### Afternoon - office to home
 

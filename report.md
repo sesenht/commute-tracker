@@ -1,7 +1,7 @@
 # Commute time report
 
-- Samples: **1,176** across **21** days (2026-08-31 to 2026-09-22)
-- Generated 2026-09-22 2:00 PM Pacific; all times below are Pacific local.
+- Samples: **1,178** across **21** days (2026-08-31 to 2026-09-22)
+- Generated 2026-09-22 2:16 PM Pacific; all times below are Pacific local.
 - Cells show the **median** drive time in minutes; `-` means no sample yet.
 - Cells marked ° rest on a single sample -- one reading, not a median. Treat them as provisional until that weekday recurs.
 
@@ -58,7 +58,7 @@
 | Time | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday |
 |---|---|---|---|---|---|---|---|
 | 2:00 PM | 66 | 71 | 75 | 72 | 81 | 62 | 52 |
-| 2:15 PM | 69 | 77 | 75 | 79 | 85 | 62 | 52 |
+| 2:15 PM | 69 | 73 | 75 | 79 | 85 | 62 | 52 |
 | 2:30 PM | 72 | 80 | 80 | 83 | 89 | 62 | 53 |
 | 2:45 PM | 77 | 83 | 87 | 89 | 92 | 61 | 53 |
 | 3:00 PM | 78 | 85 | 89 | 92 | 93 | 60 | 53 |
@@ -78,7 +78,7 @@
 | Time | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday |
 |---|---|---|---|---|---|---|---|
 | 2:00 PM | 50 | 49 | 49 | 49 | 51 | 49 | 46 |
-| 2:15 PM | 50 | 50 | 50 | 50 | 51 | 49 | 46 |
+| 2:15 PM | 50 | 49 | 50 | 50 | 51 | 49 | 46 |
 | 2:30 PM | 50 | 50 | 51 | 51 | 51 | 50 | 46 |
 | 2:45 PM | 51 | 51 | 52 | 52 | 52 | 49 | 46 |
 | 3:00 PM | 52 | 53 | 52 | 53 | 52 | 49 | 46 |
@@ -140,21 +140,21 @@ Weekdays only; the heatmaps above include weekends.
 | 3 | Tuesday | 2:00 PM | 71 | 3 |
 | 4 | Monday | 2:30 PM | 72 | 2 |
 | 5 | Thursday | 2:00 PM | 72 | 2 |
-| 6 | Wednesday | 2:00 PM | 75 | 3 |
-| 7 | Wednesday | 2:15 PM | 75 | 3 |
-| 8 | Monday | 5:30 PM | 76 | 3 |
-| 9 | Monday | 2:45 PM | 77 | 2 |
-| 10 | Tuesday | 2:15 PM | 77 | 2 |
+| 6 | Tuesday | 2:15 PM | 73 | 3 |
+| 7 | Wednesday | 2:00 PM | 75 | 3 |
+| 8 | Wednesday | 2:15 PM | 75 | 3 |
+| 9 | Monday | 5:30 PM | 76 | 3 |
+| 10 | Monday | 2:45 PM | 77 | 2 |
 
 **home2**
 
 | Rank | Day | Depart | Median min | Samples |
 |---|---|---|---|---|
 | 1 | Tuesday | 2:00 PM | 49 | 3 |
-| 2 | Wednesday | 2:00 PM | 49 | 3 |
-| 3 | Thursday | 2:00 PM | 49 | 2 |
-| 4 | Monday | 2:00 PM | 50 | 2 |
-| 5 | Tuesday | 2:15 PM | 50 | 2 |
+| 2 | Tuesday | 2:15 PM | 49 | 3 |
+| 3 | Wednesday | 2:00 PM | 49 | 3 |
+| 4 | Thursday | 2:00 PM | 49 | 2 |
+| 5 | Monday | 2:00 PM | 50 | 2 |
 | 6 | Wednesday | 2:15 PM | 50 | 3 |
 | 7 | Thursday | 2:15 PM | 50 | 2 |
 | 8 | Tuesday | 2:30 PM | 50 | 2 |

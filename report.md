@@ -1,7 +1,7 @@
 # Commute time report
 
-- Samples: **1,648** across **28** days (2026-08-31 to 2026-09-29)
-- Generated 2026-09-29 5:01 PM Pacific; all times below are Pacific local.
+- Samples: **1,650** across **28** days (2026-08-31 to 2026-09-29)
+- Generated 2026-09-29 5:16 PM Pacific; all times below are Pacific local.
 - Cells show the **median** drive time in minutes; `-` means no sample yet.
 - Cells marked ° rest on a single sample -- one reading, not a median. Treat them as provisional until that weekday recurs.
 
@@ -70,7 +70,7 @@
 | 4:30 PM | 85 | 98 | 96 | 97 | 93 | 61 | 51 |
 | 4:45 PM | 84 | 97 | 95 | 96 | 92 | 61 | 52 |
 | 5:00 PM | 82 | 92 | 92 | 94 | 87 | 61 | 53 |
-| 5:15 PM | 81 | 95 | 91 | 94 | 87 | 60 | 55 |
+| 5:15 PM | 81 | 93 | 91 | 94 | 87 | 60 | 55 |
 | 5:30 PM | 77 | 92 | 88 | 90 | 82 | 60 | 56 |
 
 ### home2
@@ -90,7 +90,7 @@
 | 4:30 PM | 56 | 70 | 69 | 70 | 58 | 48 | 47 |
 | 4:45 PM | 56 | 71 | 70 | 72 | 56 | 48 | 47 |
 | 5:00 PM | 56 | 69 | 69 | 73 | 55 | 48 | 47 |
-| 5:15 PM | 55 | 69 | 67 | 72 | 56 | 48 | 46 |
+| 5:15 PM | 55 | 68 | 67 | 72 | 56 | 48 | 46 |
 | 5:30 PM | 53 | 65 | 64 | 68 | 58 | 48 | 47 |
 
 ## Best departure windows
@@ -168,4 +168,4 @@ Weekdays only; the heatmaps above include weekends.
 | Morning - home to office | home1 | 69 min | Sunday (46 min) | Tuesday (89 min) |
 | Morning - home to office | home2 | 48 min | Sunday (40 min) | Tuesday (55 min) |
 | Afternoon - office to home | home1 | 84 min | Sunday (52 min) | Thursday (95 min) |
-| Afternoon - office to home | home2 | 52 min | Sunday (46 min) | Tuesday (61 min) |
+| Afternoon - office to home | home2 | 52 min | Sunday (46 min) | Tuesday (62 min) |

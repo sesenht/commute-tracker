@@ -1,7 +1,7 @@
 # Commute time report
 
-- Samples: **2,070** across **35** days (2026-08-31 to 2026-10-06)
-- Generated 2026-10-06 11:00 AM Pacific; all times below are Pacific local.
+- Samples: **2,072** across **35** days (2026-08-31 to 2026-10-06)
+- Generated 2026-10-06 2:00 PM Pacific; all times below are Pacific local.
 - Cells show the **median** drive time in minutes; `-` means no sample yet.
 - Cells marked ° rest on a single sample -- one reading, not a median. Treat them as provisional until that weekday recurs.
 
@@ -57,7 +57,7 @@
 
 | Time | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday |
 |---|---|---|---|---|---|---|---|
-| 2:00 PM | 66 | 72 | 77 | 76 | 80 | 63 | 53 |
+| 2:00 PM | 66 | 73 | 77 | 76 | 80 | 63 | 53 |
 | 2:15 PM | 71 | 75 | 80 | 80 | 85 | 63 | 53 |
 | 2:30 PM | 75 | 81 | 85 | 85 | 92 | 62 | 53 |
 | 2:45 PM | 78 | 86 | 90 | 89 | 94 | 62 | 53 |
@@ -137,7 +137,7 @@ Weekdays only; the heatmaps above include weekends.
 |---|---|---|---|---|
 | 1 | Monday | 2:00 PM | 66 | 3 |
 | 2 | Monday | 2:15 PM | 71 | 4 |
-| 3 | Tuesday | 2:00 PM | 72 | 4 |
+| 3 | Tuesday | 2:00 PM | 73 | 5 |
 | 4 | Tuesday | 2:15 PM | 75 | 4 |
 | 5 | Monday | 2:30 PM | 75 | 4 |
 | 6 | Thursday | 2:00 PM | 76 | 4 |
@@ -151,8 +151,8 @@ Weekdays only; the heatmaps above include weekends.
 | Rank | Day | Depart | Median min | Samples |
 |---|---|---|---|---|
 | 1 | Wednesday | 2:00 PM | 49 | 5 |
-| 2 | Tuesday | 2:00 PM | 49 | 4 |
-| 3 | Monday | 2:00 PM | 49 | 3 |
+| 2 | Monday | 2:00 PM | 49 | 3 |
+| 3 | Tuesday | 2:00 PM | 49 | 5 |
 | 4 | Thursday | 2:00 PM | 49 | 4 |
 | 5 | Tuesday | 2:15 PM | 49 | 4 |
 | 6 | Wednesday | 2:15 PM | 50 | 5 |
@@ -167,5 +167,5 @@ Weekdays only; the heatmaps above include weekends.
 |---|---|---|---|---|
 | Morning - home to office | home1 | 69 min | Sunday (46 min) | Tuesday (89 min) |
 | Morning - home to office | home2 | 48 min | Sunday (40 min) | Tuesday (55 min) |
-| Afternoon - office to home | home1 | 85 min | Sunday (53 min) | Thursday (95 min) |
+| Afternoon - office to home | home1 | 84 min | Sunday (53 min) | Thursday (95 min) |
 | Afternoon - office to home | home2 | 52 min | Sunday (46 min) | Tuesday (62 min) |

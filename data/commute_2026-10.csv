@@ -557,3 +557,5 @@ sampled_at_utc,local_date,local_time,weekday,slot,period,direction,home,duration
 2026-10-09T22:45:36Z,2026-10-09,15:45,Friday,15:45,afternoon,office_to_home,home2,3291,54.9,3327,71866,0.989,ok,
 2026-10-09T23:00:39Z,2026-10-09,16:00,Friday,16:00,afternoon,office_to_home,home1,5972,99.5,3057,69148,1.954,ok,
 2026-10-09T23:00:39Z,2026-10-09,16:00,Friday,16:00,afternoon,office_to_home,home2,3345,55.8,2957,71866,1.131,ok,
+2026-10-09T23:15:33Z,2026-10-09,16:15,Friday,16:15,afternoon,office_to_home,home1,5791,96.5,3057,69148,1.894,ok,
+2026-10-09T23:15:33Z,2026-10-09,16:15,Friday,16:15,afternoon,office_to_home,home2,3371,56.2,2957,71866,1.140,ok,

@@ -1,7 +1,7 @@
 # Commute time report
 
-- Samples: **3,116** across **51** days (2026-08-31 to 2026-10-22)
-- Generated 2026-10-22 5:30 PM Pacific; all times below are Pacific local.
+- Samples: **3,118** across **52** days (2026-08-31 to 2026-10-23)
+- Generated 2026-10-23 7:00 AM Pacific; all times below are Pacific local.
 - Cells show the **median** drive time in minutes; `-` means no sample yet.
 - Cells marked ° rest on a single sample -- one reading, not a median. Treat them as provisional until that weekday recurs.
 
@@ -11,7 +11,7 @@
 
 | Time | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday |
 |---|---|---|---|---|---|---|---|
-| 7:00 AM | 90 | 104 | 101 | 99 | 69 | 45 | 44 |
+| 7:00 AM | 90 | 104 | 101 | 99 | 70 | 45 | 44 |
 | 7:15 AM | 93 | 110 | 108 | 104 | 70 | 45 | 44 |
 | 7:30 AM | 93 | 111 | 110 | 107 | 71 | 45 | 44 |
 | 7:45 AM | 93 | 109 | 108 | 104 | 72 | 46 | 44 |
@@ -33,7 +33,7 @@
 
 | Time | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday |
 |---|---|---|---|---|---|---|---|
-| 7:00 AM | 48 | 48 | 48 | 48 | 46 | 40 | 39 |
+| 7:00 AM | 48 | 48 | 48 | 48 | 45 | 40 | 39 |
 | 7:15 AM | 48 | 52 | 52 | 51 | 47 | 40 | 39 |
 | 7:30 AM | 51 | 63 | 58 | 58 | 49 | 40 | 39 |
 | 7:45 AM | 56 | 69 | 68 | 67 | 50 | 40 | 39 |
@@ -118,9 +118,9 @@ Weekdays only; the heatmaps above include weekends.
 
 | Rank | Day | Depart | Median min | Samples |
 |---|---|---|---|---|
-| 1 | Monday | 10:45 AM | 45 | 6 |
-| 2 | Monday | 11:00 AM | 45 | 6 |
-| 3 | Friday | 7:00 AM | 46 | 6 |
+| 1 | Friday | 7:00 AM | 45 | 7 |
+| 2 | Monday | 10:45 AM | 45 | 6 |
+| 3 | Monday | 11:00 AM | 45 | 6 |
 | 4 | Friday | 10:30 AM | 46 | 6 |
 | 5 | Monday | 10:30 AM | 46 | 6 |
 | 6 | Friday | 10:00 AM | 46 | 6 |

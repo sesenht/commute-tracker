@@ -1,0 +1,3 @@
+sampled_at_utc,local_date,local_time,weekday,slot,period,direction,home,duration_s,duration_min,static_duration_s,distance_m,delay_ratio,status,note
+2026-11-01T15:00:13Z,2026-11-01,07:00,Sunday,07:00,morning,home_to_office,home1,2620,43.7,3094,69347,0.847,ok,
+2026-11-01T15:00:13Z,2026-11-01,07:00,Sunday,07:00,morning,home_to_office,home2,2340,39.0,2580,62122,0.907,ok,

@@ -1,7 +1,7 @@
 # Commute time report
 
-- Samples: **4,194** across **68** days (2026-08-31 to 2026-11-08)
-- Generated 2026-11-08 5:00 PM Pacific; all times below are Pacific local.
+- Samples: **4,196** across **68** days (2026-08-31 to 2026-11-08)
+- Generated 2026-11-08 5:15 PM Pacific; all times below are Pacific local.
 - Cells show the **median** drive time in minutes; `-` means no sample yet.
 - Cells marked ° rest on a single sample -- one reading, not a median. Treat them as provisional until that weekday recurs.
 
@@ -70,7 +70,7 @@
 | 4:30 PM | 85 | 97 | 98 | 101 | 93 | 62 | 52 |
 | 4:45 PM | 83 | 96 | 97 | 100 | 91 | 62 | 53 |
 | 5:00 PM | 81 | 93 | 95 | 96 | 88 | 62 | 53 |
-| 5:15 PM | 81 | 93 | 92 | 94 | 87 | 61 | 53 |
+| 5:15 PM | 81 | 93 | 92 | 94 | 87 | 61 | 54 |
 | 5:30 PM | 78 | 90 | 90 | 90 | 84 | 61 | 54 |
 
 ### home2
@@ -90,7 +90,7 @@
 | 4:30 PM | 57 | 70 | 70 | 71 | 57 | 48 | 47 |
 | 4:45 PM | 57 | 71 | 71 | 73 | 56 | 48 | 48 |
 | 5:00 PM | 56 | 71 | 71 | 73 | 56 | 48 | 48 |
-| 5:15 PM | 55 | 69 | 68 | 71 | 56 | 48 | 47 |
+| 5:15 PM | 55 | 69 | 68 | 71 | 56 | 48 | 48 |
 | 5:30 PM | 53 | 66 | 66 | 68 | 58 | 49 | 48 |
 
 ## Best departure windows

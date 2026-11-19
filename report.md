@@ -1,7 +1,7 @@
 # Commute time report
 
-- Samples: **4,830** across **78** days (2026-08-31 to 2026-11-18)
-- Generated 2026-11-18 5:00 PM Pacific; all times below are Pacific local.
+- Samples: **4,832** across **78** days (2026-08-31 to 2026-11-18)
+- Generated 2026-11-18 5:15 PM Pacific; all times below are Pacific local.
 - Cells show the **median** drive time in minutes; `-` means no sample yet.
 - Cells marked ° rest on a single sample -- one reading, not a median. Treat them as provisional until that weekday recurs.
 
@@ -70,7 +70,7 @@
 | 4:30 PM | 85 | 98 | 98 | 101 | 93 | 62 | 53 |
 | 4:45 PM | 83 | 98 | 97 | 100 | 91 | 62 | 53 |
 | 5:00 PM | 81 | 94 | 95 | 96 | 88 | 62 | 54 |
-| 5:15 PM | 81 | 93 | 91 | 95 | 87 | 61 | 54 |
+| 5:15 PM | 81 | 93 | 92 | 95 | 87 | 61 | 54 |
 | 5:30 PM | 78 | 92 | 90 | 91 | 83 | 61 | 54 |
 
 ### home2

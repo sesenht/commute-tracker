@@ -1,7 +1,7 @@
 # Commute time report
 
-- Samples: **5,160** across **84** days (2026-08-31 to 2026-11-24)
-- Generated 2026-11-24 7:31 AM Pacific; all times below are Pacific local.
+- Samples: **5,162** across **84** days (2026-08-31 to 2026-11-24)
+- Generated 2026-11-24 7:46 AM Pacific; all times below are Pacific local.
 - Cells show the **median** drive time in minutes; `-` means no sample yet.
 - Cells marked ° rest on a single sample -- one reading, not a median. Treat them as provisional until that weekday recurs.
 
@@ -165,7 +165,7 @@ Weekdays only; the heatmaps above include weekends.
 
 | Direction | Home | Overall median | Best day | Worst day |
 |---|---|---|---|---|
-| Morning - home to office | home1 | 67 min | Sunday (46 min) | Tuesday (86 min) |
+| Morning - home to office | home1 | 67 min | Sunday (46 min) | Tuesday (87 min) |
 | Morning - home to office | home2 | 48 min | Sunday (40 min) | Tuesday (55 min) |
 | Afternoon - office to home | home1 | 85 min | Sunday (52 min) | Thursday (95 min) |
 | Afternoon - office to home | home2 | 52 min | Sunday (46 min) | Thursday (62 min) |
